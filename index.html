@@ -1,0 +1,4774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Foundation Group Investment</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&
+  family=Montserrat:wght@600;700;800&
+  family=Roboto+Mono:wght@400;500;700&
+  display=swap" 
+  rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;background:#0b1220;color:#e8eef8;
+  font-family:Arial,sans-serif
+}
+header{
+  padding:10px 15px;background:#111c30;
+  border-bottom:1px solid #263650
+}
+header h2{margin:0;color:#65d6b0;font-size:20px;text-align: center;}
+header p{color:#a8b6ca;font-size:13px;margin:7px 0 0;text-align:center;}
+main{max-width:1100px;margin:auto;padding:14px}
+.card{
+  background:#142137;border:1px solid #293c58;
+  border-radius:13px;padding:16px;margin-bottom:15px
+}
+h3{font-size:20px;color:#702963;margin:0 0 14px;text-align: center}
+label{display:block;color:#9aacc4;font-size:12px;margin-top:10px}
+input{
+  width:100%;padding:13px;margin:6px 0 10px;
+  background:#0b1526;color:white;
+  border:1px solid #354967;border-radius:8px
+}
+  
+/* RAINBOW DESIGN FOR ALL BUTTONS */
+button,
+button.secondary {
+  width:100%;
+  padding:13px;
+  margin:5px 0;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:10px;
+
+  background:linear-gradient(
+    100deg,
+    #ff5252,
+    #ff9800,
+    #fff172,
+    #22c58b,
+    #2196f3,
+    #9c27b0,
+    #ff80ab
+  );
+
+  color:#ffffff;
+  font-weight:800;
+  cursor:pointer;
+  transition:transform .2s, filter .2s;
+  box-shadow:0 3px 12px rgba(0,0,0,.25);
+}
+
+button:hover {
+  filter:brightness(1.15);
+}
+
+button:active {
+  transform:scale(.97);
+}
+
+button:disabled {
+  opacity:.5;
+  cursor:not-allowed;
+}
+  .password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 15px;
+  color: #a8b6ca;
+}
+.grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px
+}
+  .password-wrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  min-width: 0;
+}
+
+.password-wrapper button {
+  width: 60px;
+  flex-shrink: 0;
+  margin: 4px 0 6px;
+  padding: 13px 5px;
+}
+  body {
+  font-family: 'Inter', sans-serif;
+}
+
+header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 750;
+}
+
+input, button {
+  font-family: 'Inter', sans-serif;
+}
+
+/* RAINBOW DASHBOARD THEME */
+
+header {
+  background: linear-gradient(
+    110deg,
+    #111c30,
+    #251747,
+    #123b50,
+    #111c30
+  );
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    red, orange, yellow, lime,
+    cyan, blue, violet
+  ) 1;
+}
+
+/* Rainbow heading */
+header h2 {
+  background: linear-gradient(
+    90deg,
+    #ff5252,
+    #ff0000,
+    #fff176,
+    #ff980083,
+    #40c4ff,
+    #b388ff,
+    #ff80ab
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Rainbow card borders */
+.card {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#142137, #142137) padding-box,
+    linear-gradient(
+      120deg,
+      #ff5252,
+      #ff0000,
+      black,
+      black,
+      #b388ff,
+      #ff80ab
+    ) border-box;
+}
+
+/* Rainbow buttons */
+button {
+  background: linear-gradient(
+    100deg,
+    black,
+    #ff0000,
+    #C71585,
+    purple,
+    #D4AF37,
+    black
+  );
+  color: white;
+  transition: 0.3s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Colourful input focus */
+input:focus {
+  outline: none;
+  border-color: #40c4ff;
+  box-shadow: 0 0 8px #40c4ff66;
+}
+
+/* Rainbow section headings */
+h3 {
+  background: linear-gradient(
+    90deg,
+    #ff80ab,
+    #ffb347,
+    #69f0ae,
+    #40c4ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* RAINBOW SUCCESS MESSAGE */
+.success-message {
+  display:none;
+  width:100%;
+  margin:20px auto;
+  padding:22px 15px;
+  text-align:center;
+  border:2px solid transparent;
+  border-radius:14px;
+
+  background:
+    linear-gradient(#142137,#142137) padding-box,
+    linear-gradient(90deg,
+      red,orange,yellow,lime,
+      cyan,blue,violet
+    ) border-box;
+
+  box-shadow:0 0 18px rgba(64,196,255,.2);
+  color:white;
+  font-weight:700;
+}
+
+.success-message .success-icon {
+  display:block;
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.success-message p {
+  color:#a8b6ca;
+  font-size:13px;
+  margin-top:8px;
+}
+  
+/* LOGIN DESIGN */
+
+.login-card {
+  background: radial-gradient(circle at top, #17264b, #050b1b 80%);
+  border: 2px solid transparent;
+  border-radius: 22px;
+  padding: 20px 15px;
+  background-clip: padding-box;
+  box-shadow: 0 0 22px #168bff55;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 14px 8px;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, violet);
+  text-shadow: 0 2px 5px #000;
+  margin-bottom: 24px;
+}
+
+.neon-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #030b20;
+  border: 2px solid #20bfff;
+  border-radius: 18px;
+  padding: 4px 13px;
+  margin: 17px 0;
+  box-shadow: 0 0 12px #168bff55;
+}
+
+.neon-field svg {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  stroke: #36cfff;
+  fill: none;
+  stroke-width: 2.4;
+}
+
+.neon-field input {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  margin: 0;
+  padding: 14px 3px;
+  font-size: 15px;
+  outline: none;
+}
+
+.neon-field input:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.password-eye {
+  width: 42px;
+  min-width: 42px;
+  padding: 7px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.password-eye svg {
+  width: 25px;
+  height: 25px;
+  stroke: white;
+}
+
+.login-submit {
+  margin-top: 15px;
+  padding: 16px;
+  font-size: 19px;
+  border-radius: 40px;
+}
+
+.eagle-art {
+  width: 100%;
+  max-width: 460px;
+  margin: 24px auto 0;
+  display: block;
+  filter: drop-shadow(0 0 15px #168bff88);
+}
+ body {
+    font-family: 'Roboto Mono', monospace;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>All FOUNDATION GROUP</h2>
+  <h3>Gk Investment</h3>
+  <p>BUILD  •  GROW  • INVEST</p>
+</header>
+
+<main>
+
+  
+<!-- SUPABASE CONNECTION SETTINGS -->
+<section class="card" id="connectionSettings" style="display:none">
+
+  <h3>SUPABASE CONNECTION SETTINGS</h3>
+
+  <p style="text-align:center;color:#a8b6ca">
+    Enter your project connection details.
+    They will be saved on this device.
+  </p>
+
+  <div id="connectionFields">
+
+    <label>Supabase Project URL</label>
+    <input id="projectUrl"
+      type="url"
+      placeholder="https://your-project.supabase.co">
+
+    <label>Supabase Publishable Key</label>
+    <input id="publishableKey"
+      type="password"
+      placeholder="Enter your publishable key">
+
+    <button onclick="saveConnectionSettings()">
+      SAVE CONNECTION SETTINGS
+    </button>
+
+  </div>
+
+  <div id="settingsMessage" class="success-message"></div>
+
+  <button class="secondary" onclick="showWelcome()">
+    BACK TO WELCOME
+  </button>
+
+</section>
+
+
+<!-- WELCOME SCREEN -->
+<section class="card" id="welcomeBox">
+  <h3>WELCOME</h3>
+  <p style="text-align:center;color:#a8b6ca">
+    Welcome to All Foundation Group! We are delighted to have you here. Your journey towards smarter financial management, growth, and investment starts here.
+  </p>
+<button onclick="openConnectionSettings()">
+  SUPABASE CONNECTION SETTINGS
+</button>
+  
+  <button onclick="showLogin()">
+    EXISTING USER — SIGN IN
+  </button>
+
+  <button class="secondary" onclick="showRegister()">
+    NEW USER — CREATE ACCOUNT
+  </button>
+</section>
+
+
+<!-- LOGIN SCREEN -->
+<section class="card login-card" id="loginBox" style="display:none">
+
+  <div class="login-title">
+    🔒 SECURE LOGIN
+  </div>
+
+  <div class="neon-field">
+
+    <!-- MAIL ICON -->
+    <svg viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="3"/>
+      <path d="m3 6 9 7 9-7"/>
+    </svg>
+
+    <input id="email"
+      type="email"
+      placeholder="Your email address"
+      autocomplete="username">
+  </div>
+
+  <div class="neon-field">
+
+    <!-- LOCK ICON -->
+    <svg viewBox="0 0 24 24">
+      <rect x="4" y="10" width="16" height="12" rx="2"/>
+      <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+      <circle cx="12" cy="16" r="1"/>
+    </svg>
+
+    <input id="password"
+      type="password"
+      placeholder="Your password"
+      autocomplete="current-password">
+
+    <!-- SHOW / HIDE PASSWORD -->
+    <button type="button"
+      class="password-eye"
+      id="passwordToggle"
+      onclick="toggleLoginPassword()"
+      aria-label="Show password">
+
+      <svg id="passwordEyeIcon" viewBox="0 0 24 24">
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+
+    </button>
+
+  </div>
+
+  <button type="button"
+    class="login-submit"
+    id="loginBtn"
+    onclick="login()">
+    ➜ SIGN IN
+  </button>
+
+  <p id="loginMessage" style="text-align:center"></p>
+
+  <div style="text-align:center;color:#a8b6ca;margin:12px">
+    ━━━━━━━━━ OR ━━━━━━━━━
+  </div>
+
+  <button type="button"
+    onclick="showWelcome()">
+    ← BACK
+  </button>
+
+  <!-- FOOTER-->
+  <div class="footer">
+    <h5>DREAM BIG • INVEST SMART • GROW WINGS</>
+  </div>
+
+</section>
+
+
+<!-- REGISTRATION SCREEN -->
+<section class="card" id="registerBox"
+  style="display:none">
+
+  <h3>CREATE ACCOUNT</h3>
+
+  <label>Full Name</label>
+  <input id="registerName" type="text">
+
+  <label>Email Address</label>
+  <input id="registerEmail" type="email">
+
+  <label>Phone Number</label>
+  <input id="registerPhone" type="tel">
+
+  <label>Password</label>
+  <input id="registerPassword" type="password">
+
+  <button onclick="registerUser()">
+    CREATE ACCOUNT
+  </button>
+
+  <p id="registerMessage"></p>
+
+  <button class="secondary" onclick="showWelcome()">
+    BACK
+  </button>
+</section>
+
+
+<!-- AUTHENTICATED DASHBOARD -->
+<section id="dashboardBox" style="display:none">
+
+  <h3>GK INVESTMENT DASHBOARD</h3>
+
+  <div class="success-message" id="dashboardWelcome"
+       style="display:block">
+
+    <span class="success-icon">✓</span>
+    <strong>WELCOME TO ALL FOUNDATION GROUP</strong>
+
+    <p id="dashboardName">Loading your profile...</p>
+    <p id="dashboardEmail"></p>
+    <p id="dashboardRole"></p>
+
+  </div>
+
+<!-- FINANCIAL MANAGEMENT ENTRY -->
+<div style="text-align:center;font-size:12px;margin:12px 0;">
+
+  <h3>FINANCIAL MANAGEMENT</h3>
+
+  <p>Manage accounting, savings, loans, shares and other financial operations.</p>
+
+  <button type="button"
+          onclick="showFinancialManagement()"
+          style="width:100%;padding:10px;">
+    OPEN FINANCIAL MANAGEMENT
+  </button>
+
+</div>
+<!-- END FINANCIAL MANAGEMENT ENTRY -->
+
+<div id="financialOverviewBox" style="display:none;">
+  
+<!-- FINANCIAL SUMMARY -->
+<h3>FINANCIAL OVERVIEW</h3>
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;">
+
+   <div class="card" style="padding:2px;text-align:center;">
+  <h4 style="font-size:12px;margin:5px 0;">Total Members</h4>
+  <h2 id="dashTotalMembers" style="font-size:22px;margin:5px 0;">Loading...</h2>
+</div> 
+  
+  <div class="card" style="padding:2px;text-align:center;">
+     <h4 style="font-size:12px;margin:5px 0;">Total Savings</h4>
+    <h2 id="dashTotalSavings"style="font-size:16px;margin:5px 0;">UGX 0</h2>
+  </div>
+
+  <div class="card" style="padding:2px;text-align:center;">
+     <h4 style="font-size:12px;margin:5px 0;">Total Loans</h4>
+    <h2 id="dashTotalLoans"style="font-size:16px;margin:5px 0;">UGX 0</h2>
+  </div>
+
+  <div class="card" style="padding:2px;text-align:center;">
+      <h4 style="font-size:12px;margin:5px 0;">Total Investments</h4>
+    <h2 id="dashTotalInvestments"style="font-size:16px;margin:5px 0;">UGX 0</h2>
+  </div>
+
+  <div class="card" style="padding:2px;text-align:center;">
+      <h4 style="font-size:12px;margin:5px 0;">Total Shares</h4>
+    <h2 id="dashTotalShares"style="font-size:16px;margin:5px 0;">UGX 0</h2>
+  </div>
+
+  <div class="card" style="padding:1px;text-align:center;">
+        <h4 style="font-size:12px;margin:5px 0;">Welfare Contributions</h4>
+    <h2 id="dashTotalWelfare"style="font-size:16px;margin:5px 0;">UGX 0</h2>
+  </div>
+
+  <div class="card" style="padding:1px;text-align:center;">
+         <h4 style="font-size:12px;margin:5px 0;">Approved Income</h4
+    <h2 id="dashTotalIncome"style="font-size:16px;margin:5px 0;">UGX 0</h2>
+  </div>
+
+  <div class="card" style="padding:1px;text-align:center;">
+          <h4 style="font-size:12px;margin:5px 0;">Approved Expenses</h4>
+    <h2 id="dashTotalExpenses"style="font-size:16px;margin:5px 0;">UGX 0</h2>
+  </div>
+
+</div>
+<!-- END FINANCIAL SUMMARY -->
+
+<!-- PENDING APPROVALS -->
+<h3>PENDING APPROVALS</h3>
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;">
+
+    <h4 style="font-size:12px;margin:5px 0;">Pending Savings Approvals</h4>
+    <h2 id="dashPendingSavings" style="font-size:16px;margin:5px 0;">Loading...</h2>
+  </>
+
+    <h4 style="font-size:12px;margin:5px 0;">Pending Accounting Approvals</h4>
+    <h2 id="dashPendingAccounting" style="font-size:16px;margin:5px 0;">Loading...</h2>
+  </>
+
+</div>
+<!-- END PENDING APPROVALS -->
+
+<!-- RECENT TRANSACTIONS -->
+<h3>RECENT TRANSACTIONS</h3>
+
+<div style="overflow-x:auto;">
+
+  <table style="width:100%;font-size:10px;border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody id="dashRecentTransactions">
+      <tr>
+        <td colspan="4">Loading transactions...</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<!-- END RECENT TRANSACTIONS -->
+</div>
+  <button type="button" onclick="logout()">LOG OUT</button>
+
+</section>
+
+<!-- FINANCIAL MANAGEMENT WORKSPACE -->
+<section class="card" id="financialManagementBox"
+         style="display:none;">
+
+  <h2>FINANCIAL MANAGEMENT</h2>
+
+  <p>Manage the financial operations of All Foundation Group.</p>
+
+<!-- FINANCIAL MANAGEMENT MENU -->
+
+<div style="display:grid;gap:12px;margin-bottom:20px;">
+
+  <button type="button" onclick="showFinancialOperations()">
+    FINANCIAL OPERATIONS
+  </button>
+
+  <button type="button" id="approvalCentreButton" onclick="showApprovalCentre()">
+    APPROVAL CENTRE
+</button>
+
+<button type="button" id="administrationButton" onclick="showAdministration()">
+    ADMINISTRATION
+</button>
+
+</div>
+
+</section>
+<!-- FINANCIAL OPERATIONS WORKSPACE -->
+<section id="financialOperationsBox"
+         style="display:none;">
+  <button type="button" onclick="showFinancialManagement()">
+  BACK TO FINANCIAL MANAGEMENT
+</button>
+
+<button type="button" onclick="showDashboard()">
+  BACK TO DASHBOARD
+</button>
+  <h2>FINANCIAL OPERATIONS</h2>
+  <div id="financialModules" style="display:grid;gap:10px"></div>
+</section>
+
+<!-- SHARES MANAGEMENT WORKSPACE -->
+<section  id="sharesBox" style="display:none;">
+
+  <button type="button" onclick="showFinancialOperations()">
+    BACK TO FINANCIAL OPERATIONS DASHBOARD
+  </button>
+
+  <h2>SHARES MANAGEMENT</h2>
+
+  <p>Manage member shares, purchases, transfers and dividends.</p>
+
+  <div id="sharesMessage"></div>
+
+  <h3>SHARE REGISTRATION</h3>
+  <div id="shareRegistration">
+
+  <label>Member</label>
+  <select id="shareMember">
+    <option value="">Select Member</option>
+  </select>
+
+  <label>Membership Number</label>
+  <input type="text" id="shareMembershipNo"
+         placeholder="Enter membership number">
+
+  <label>Number of Shares</label>
+  <input type="number" id="shareQuantity"
+         placeholder="Enter number of shares" min="1">
+
+  <label>Price Per Share (UGX)</label>
+  <input type="number" id="sharePrice"
+         placeholder="Enter price per share" min="0">
+
+  <label>Registration Date</label>
+  <input type="date" id="shareRegistrationDate">
+
+  <button type="button" onclick="registerShare()">
+    REGISTER SHARES
+  </button>
+
+</div>
+
+  <h3>PURCHASE SHARES</h3>
+  <div id="sharePurchase">
+
+  <label>Member</label>
+  <select id="purchaseShareMember">
+    <option value="">Select Member</option>
+  </select>
+
+  <label>Membership Number</label>
+  <input type="text" id="purchaseMembershipNo"
+         placeholder="Enter membership number">
+
+  <label>Number of Shares to Purchase</label>
+  <input type="number" id="purchaseShareQuantity"
+         min="1" placeholder="Enter quantity">
+
+  <label>Price Per Share (UGX)</label>
+  <input type="number" id="purchaseSharePrice"
+         min="0" placeholder="Enter price">
+
+  <label>Payment Method</label>
+  <select id="sharePaymentMethod">
+    <option value="">Select Payment Method</option>
+    <option value="cash">Cash</option>
+    <option value="mobile_money">Mobile Money</option>
+    <option value="bank">Bank Transfer</option>
+  </select>
+
+  <label>Purchase Date</label>
+  <input type="date" id="sharePurchaseDate">
+
+  <button type="button" onclick="purchaseShares()">
+    PURCHASE SHARES
+  </button>
+
+</div>
+
+  <h3>MEMBERS' SHARE BALANCES</h3>
+  <div id="shareBalances">
+
+  <label>Search Member</label>
+  <input type="text" id="shareBalanceSearch"
+         placeholder="Search by name or membership number">
+
+  <div style="overflow-x:auto;margin-top:12px;">
+
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Membership No.</th>
+          <th>Member Name</th>
+          <th>Shares Owned</th>
+          <th>Share Value (UGX)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="shareBalancesTableBody">
+        <tr>
+          <td colspan="6">No share records available.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+  <h3>SHARE TRANSFERS</h3>
+  <div id="shareTransfers">
+
+  <label>Transfer From (Member)</label>
+  <select id="transferFromMember">
+    <option value="">Select Member</option>
+  </select>
+
+  <label>Transfer To (Member)</label>
+  <select id="transferToMember">
+    <option value="">Select Member</option>
+  </select>
+
+  <label>Number of Shares</label>
+  <input type="number" id="transferShareQuantity"
+         min="1" placeholder="Enter shares to transfer">
+
+  <label>Transfer Date</label>
+  <input type="date" id="shareTransferDate">
+
+  <label>Reason / Description</label>
+  <textarea id="shareTransferReason"
+            placeholder="Enter transfer details"></textarea>
+
+  <button type="button" onclick="transferShares()">
+    SUBMIT SHARE TRANSFER
+  </button>
+
+  <h4>TRANSFER HISTORY</h4>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>From Member</th>
+          <th>To Member</th>
+          <th>Shares</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="shareTransferTableBody">
+        <tr>
+          <td colspan="6">No transfer records available.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+  <h3>DIVIDEND RECORDS</h3>
+  <div id="shareDividends">
+
+  <h4>RECORD DIVIDEND</h4>
+
+  <label>Dividend Period</label>
+  <input type="text" id="dividendPeriod"
+         placeholder="e.g. 2026 Annual Dividend">
+
+  <label>Dividend Per Share (UGX)</label>
+  <input type="number" id="dividendPerShare"
+         min="0" placeholder="Enter amount">
+
+  <label>Declaration Date</label>
+  <input type="date" id="dividendDeclarationDate">
+
+  <label>Payment Date</label>
+  <input type="date" id="dividendPaymentDate">
+
+  <button type="button" onclick="recordDividend()">
+    RECORD DIVIDEND
+  </button>
+
+  <h4>DIVIDEND REGISTER</h4>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Dividend Period</th>
+          <th>Dividend Per Share</th>
+          <th>Declaration Date</th>
+          <th>Payment Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="dividendTableBody">
+        <tr>
+          <td colspan="6">No dividend records available.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+  <h3>SHARES REGISTER & REPORTS</h3>
+  <div id="sharesRegister">
+
+  <h4>SHARES SUMMARY</h4>
+
+  <div class="card">
+    <p>Total Registered Members</p>
+    <h2 id="totalShareMembers">0</h2>
+  </div>
+
+  <div class="card">
+    <p>Total Shares Issued</p>
+    <h2 id="totalSharesIssued">0</h2>
+  </div>
+
+  <div class="card">
+    <p>Total Share Capital (UGX)</p>
+    <h2 id="totalShareCapital">UGX 0</h2>
+  </div>
+
+  <div class="card">
+    <p>Total Dividends Declared (UGX)</p>
+    <h2 id="totalDividendsDeclared">UGX 0</h2>
+  </div>
+
+  <h4>SHARES REGISTER</h4>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Membership No.</th>
+          <th>Member Name</th>
+          <th>Shares</th>
+          <th>Share Value (UGX)</th>
+          <th>Registration Date</th>
+        </tr>
+      </thead>
+
+      <tbody id="sharesRegisterTableBody">
+        <tr>
+          <td colspan="6">No share records available.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>REPORTS</h4>
+
+  <label>Report Type</label>
+  <select id="shareReportType">
+    <option value="">Select Report</option>
+    <option value="shareholders">Shareholders Report</option>
+    <option value="purchases">Share Purchases Report</option>
+    <option value="transfers">Share Transfers Report</option>
+    <option value="dividends">Dividend Report</option>
+    <option value="capital">Share Capital Report</option>
+  </select>
+
+  <label>Start Date</label>
+  <input type="date" id="shareReportStart">
+
+  <label>End Date</label>
+  <input type="date" id="shareReportEnd">
+
+  <button type="button" onclick="generateSharesReport()">
+    GENERATE REPORT
+  </button>
+
+  <button type="button" onclick="exportSharesReport()">
+    EXPORT TO EXCEL
+  </button>
+
+  <div id="sharesReportOutput">
+    Select a report type to begin.
+  </div>
+
+</div>
+
+</section>
+  
+<!-- APPROVAL CENTRE WORKSPACE -->
+<section class="card" id="approvalCentreBox"
+         style="display:none;">
+  <button type="button" onclick="showFinancialManagement()">
+  BACK TO FINANCIAL MANAGEMENT
+</button>
+  <h2>APPROVAL CENTRE</h2>
+  <div id="approvalModules" style="display:grid;gap:10px"></div>
+</section>
+
+<!-- ADMINISTRATION WORKSPACE -->
+<section class="card" id="administrationBox"
+         style="display:none;">
+  <button type="button" onclick="showFinancialManagement()">
+  BACK TO FINANCIAL MANAGEMENT
+</button>
+  <h2>ADMINISTRATION</h2>
+  <div id="administrationModules" style="display:grid;gap:10px"></div>
+<button type="button" onclick="showMemberRegistration()">
+  REGISTER NEW MEMBER
+</button>
+</section>
+
+<!-- MEMBER REGISTRATION WORKSPACE -->
+<section class="card" id="memberRegistrationBox"
+         style="display:none;">
+
+  <button type="button" onclick="showAdministration()">
+    BACK TO ADMINISTRATION
+  </button>
+
+  <h2>REGISTER NEW MEMBER</h2>
+
+  <p>Enter the new member's details below.</p>
+
+  <form id="memberRegistrationForm"
+      onsubmit="registerNewMember(event)">
+
+    <label>Full Name</label>
+    <input type="text" id="newMemberName"
+           placeholder="Enter full name" required>
+
+    <label>Email Address</label>
+    <input type="email" id="newMemberEmail"
+           placeholder="Enter email address">
+
+    <label>Phone Number</label>
+    <input type="tel" id="newMemberPhone"
+           placeholder="Enter phone number" required>
+
+    <p>
+  Membership Number: Automatically generated when the member is saved.
+</p>
+
+    <label>Date Joined</label>
+    <div id="memberPasswordBox" style="display:none;">
+  <label>Initial Password</label>
+
+  <input
+    type="password"
+    id="newMemberPassword"
+    placeholder="Enter initial password"
+    minlength="6"
+    autocomplete="new-password">
+</div>
+    <input type="date" id="newMemberDate" required>
+<label>ACCOUNT ACTIVATION METHOD</label>
+
+<select id="memberActivationMethod" required>
+  <option value="email">
+    Email Confirmation
+  </option>
+
+  <option value="immediate">
+    Immediate Account Access
+  </option>
+</select>
+    <p id="memberRegistrationMessage"></p>
+    <button type="submit">SAVE MEMBER</button>
+
+  </>
+
+</section>
+  
+<!-- SETTINGS WORKSPACE -->
+<section class="card" id="settingsBox" style="display:none;">
+
+  <h2>SYSTEM SETTINGS</h2>
+
+  <p>Manage organization information and system preferences.</p>
+
+  <button type="button" onclick="showAdministration()">
+    BACK TO ADMINISTRATION
+  </button>
+
+  <div class="card">
+    <h3>ORGANIZATION INFORMATION</h3>
+
+    <label>Organization Name</label>
+    <input type="text" id="organizationName"
+           placeholder="Enter organization name">
+
+    <label>Organization Email</label>
+    <input type="email" id="organizationEmail"
+           placeholder="Enter organization email">
+
+    <label>Phone Number</label>
+    <input type="tel" id="organizationPhone"
+           placeholder="Enter phone number">
+
+    <label>Physical Address</label>
+    <textarea id="organizationAddress"
+              placeholder="Enter organization address"></textarea>
+
+    <button type="button" onclick="saveOrganizationSettings()">
+      SAVE ORGANIZATION SETTINGS
+    </button>
+  </div>
+
+  <div class="card">
+    <h3>SYSTEM PREFERENCES</h3>
+
+    <label>Default Currency</label>
+    <select id="systemCurrency">
+      <option value="UGX">Uganda Shillings (UGX)</option>
+    </select>
+
+    <label>Financial Year Begins</label>
+    <select id="financialYearStart">
+      <option value="01-01">January</option>
+      <option value="07-01">July</option>
+    </select>
+
+    <button type="button" onclick="saveSystemPreferences()">
+      SAVE SYSTEM PREFERENCES
+    </button>
+  </div>
+
+</section>
+
+  <!-- USER MANAGEMENT WORKSPACE -->
+<section id="usersBox" style="display:none;">
+
+  <h2>USER MANAGEMENT</h2>
+
+  <p>Manage system users, accounts, roles and access permissions.</p>
+
+  <button type="button" onclick="showAdministration()">
+    BACK TO ADMINISTRATION
+  </button>
+
+  <!-- REGISTER USER -->
+  <div>
+    <h3>REGISTER NEW USER</h3>
+
+    <label>Full Name</label>
+    <input type="text" id="newUserName"
+           placeholder="Enter full name">
+
+    <label>Email Address</label>
+    <input type="email" id="newUserEmail"
+           placeholder="Enter email address">
+
+    <label>Phone Number</label>
+    <input type="tel" id="newUserPhone"
+           placeholder="Enter phone number">
+
+    <label>Assign Role</label>
+    <select id="newUserRole">
+      <option value="">Select Role</option>
+      <option value="1">Super Administrator</option>
+      <option value="3">Accountant</option>
+      <option value="7">Auditor</option>
+    </select>
+
+    <button type="button" onclick="registerSystemUser()">
+      REGISTER USER
+    </button>
+  </div>
+
+  <!-- USER REGISTER -->
+  <div>
+    <h3>SYSTEM USERS REGISTER</h3>
+
+    <input
+      type="text"
+      id="userSearch"
+      placeholder="Search by name, email or phone"
+      style="width:100%;padding:10px;margin-bottom:12px;">
+
+    <button type="button" onclick="loadSystemUsers()">
+      REFRESH USERS
+    </button>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="systemUsersTableBody">
+          <tr>
+            <td colspan="7">User records will appear here.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- USER PERMISSIONS -->
+  <div>
+    <h3>ROLE & PERMISSION MANAGEMENT</h3>
+
+    <p>
+      Manage access to system modules according to assigned roles.
+    </p>
+
+    <button type="button" onclick="showRolePermissions()">
+      MANAGE ROLES & PERMISSIONS
+    </button>
+  </div>
+
+</section>
+  
+<!-- END FINANCIAL MANAGEMENT WORKSPACE -->
+  
+<!-- SAVINGS WORKSPACE -->
+<section id="savingsBox" style="display:none">
+
+  <h3>MY SAVINGS</h3>
+
+  <div class="card" style="padding:1px;text-align:center;font-size: 14">
+    <p style="color:#a8b6ca">SAVINGS ACCOUNT</p>
+    <h2 id="savingsBalance">UGX 0</h2>
+    <p id="savingsAccountName">Loading account...</p>
+    <p id="savingsAccountStatus"></p>
+  </div>
+
+  <h3>REQUEST A DEPOSIT</h3>
+
+  <label>Deposit Amount (UGX)</label>
+  <input id="depositAmount" type="number"
+         min="1" step="0.01"
+         placeholder="Enter amount">
+
+  <label>Deposit Source</label>
+  <select id="depositSource"
+          style="width:100%;padding:13px;background:#0b1526;color:white;border:1px solid #354967;border-radius:8px">
+    <option value="cash">Cash</option>
+    <option value="bank">Bank</option>
+    <option value="mobile">Mobile Money</option>
+  </select>
+
+  <button type="button" onclick="requestDeposit()">
+    REQUEST DEPOSIT
+  </button>
+
+  <h3>REQUEST A WITHDRAWAL</h3>
+
+  <label>Withdrawal Amount (UGX)</label>
+  <input id="withdrawAmount" type="number"
+         min="1" step="0.01"
+         placeholder="Enter amount">
+
+  <label>Payment Destination</label>
+  <select id="withdrawSource"
+          style="width:100%;padding:12px;background:#0b1526;color:white;border:1px solid #354967;border-radius:8px">
+    <option value="cash">Cash</option>
+    <option value="bank">Bank</option>
+    <option value="mobile">Mobile Money</option>
+  </select>
+
+  <button type="button" onclick="requestWithdrawal()">
+    REQUEST WITHDRAWAL
+  </button>
+
+  <p id="savingsMessage" style="text-align:center"></p>
+
+  <h3>TRANSACTION HISTORY</h3>
+  <div id="savingsHistory">
+    Transaction history will appear here.
+  </div>
+
+  <button type="button" onclick="showFinancialOperations()">
+    BACK
+  </button>
+
+</section>
+
+  
+<!-- ADMIN SAVINGS APPROVAL SCREEN -->
+<div id="savingsApprovalBox" style="display:none; padding:20px; color:white;">
+
+  <h2>Pending Savings Deposits</h2>
+  <p>Review and approve member deposit requests.</p>
+
+  <button type="button" onclick="loadPendingDeposits()">
+    Refresh Requests
+  </button>
+
+  <div id="pendingDepositsList">
+    Loading pending deposits...
+  </div>
+  <h2>Pending Savings Withdrawals</h2>
+
+<button type="button" onclick="loadPendingWithdrawals()">
+  REFRESH WITHDRAWALS
+</button>
+
+<div id="pendingWithdrawalsList">
+  Loading pending withdrawals...
+</div>
+
+<p id="withdrawalApprovalMessage"></p>
+
+  <p id="approvalMessage"></p>
+
+  <button type="button" onclick="showApprovalCentre()">
+    BACK
+  </button>
+
+</div>
+
+
+<!-- END CUSTOM DATE RANGE REPORT -->
+
+  <!-- ACCOUNTING WORKSPACE -->
+<section id="accountingBox" style="display:none; padding:8px;">
+ 
+  <!-- RECORD TRANSACTION -->
+<div style="padding:2px;text-align:center;">
+    <h3>RECORD TRANSACTION</h3>
+
+    <label>Transaction Type</label>
+    <select id="accountingType">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <label>Category</label>
+    <input type="text" id="accountingCategory"
+           placeholder="Enter category">
+
+    <label>Amount (UGX)</label>
+    <input type="number" id="accountingAmount"
+           min="1" step="0.01">
+
+    <label>Transaction Date</label>
+    <input type="date" id="accountingDate">
+
+    <label>Reference Number</label>
+    <input type="text" id="accountingReference"
+           placeholder="Optional reference">
+
+    <label>Description</label>
+    <textarea id="accountingDescription"
+              placeholder="Enter transaction description"></textarea>
+
+    <button type="button" onclick="saveAccountingTransaction()">
+        SAVE TRANSACTION
+    </button>
+</div>
+<!-- END RECORD TRANSACTION -->
+  <h3>MONTHLY ACCOUNTING REPORT</h3>
+
+  <label>Select Month:</label>
+  <input type="month" id="accountingReportMonth">
+
+  <button onclick="generateAccountingReport()">
+    GENERATE REPORT
+  </button>
+
+  <div id="accountingReportResult" style="margin-top:15px;">
+    Select a month to view its report.
+  </div>
+
+</div>
+<!-- END MONTHLY ACCOUNTING REPORT -->
+
+
+  <p id="accountingMessage"></p>
+
+  
+<!-- ACCOUNTING SUMMARY -->
+    <h3>Accounting Summary</h3>
+
+    <p>Approved Income:
+        <strong id="accountingIncome">UGX 0</strong>
+    </p>
+
+    <p>Approved Expenses:
+        <strong id="accountingExpenses">UGX 0</strong>
+    </p>
+
+    <p>Balance:
+        <strong id="accountingBalance">UGX 0</strong>
+    </p>
+</>
+<!-- END ACCOUNTING SUMMARY -->
+
+  
+    <h3>TRANSACTION REGISTER</h3>
+
+    <button type="button" onclick="loadAccountingTransactions()">
+        REFRESH TRANSACTIONS
+    </button>
+
+    <div id="accountingTransactions">
+        Transactions will appear here.
+    </div>
+
+    <button type="button" onclick="showFinancialOperations()">
+        BACK
+    </button>
+
+</section>
+<!-- END ACCOUNTING WORKSPACE --> 
+
+
+<!-- ACCOUNTING APPROVALS WORKSPACE -->
+<section id="accountingApprovalsBox", "membersBox" style="display:none; padding:20px;">
+
+  <h2>Accounting Approvals</h2>
+
+  <div style="padding:5px;text-align:center;">
+    <h3>Pending Transactions</h3>
+
+    <button type="button" onclick="loadAccountingApprovals()">
+      REFRESH APPROVALS
+    </button>
+
+    <div id="accountingApprovalsList">
+      Loading pending transactions...
+    </div>
+  </div>
+
+  <button type="button" onclick="showAccounting()">
+    BACK TO ACCOUNTING
+  </button>
+
+</section>
+<!-- END ACCOUNTING APPROVALS WORKSPACE -->
+
+  <!-- MEMBERS MANAGEMENT WORKSPACE -->
+<section id="membersBox" style="display:none; padding:20px;">
+
+  <h2>Members Management</h2>
+
+  <style>
+  #membersRegisterTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: #222;
+    font-size: 13px;
+  }
+
+  #membersRegisterTable th,
+  #membersRegisterTable td {
+    border: 1px solid #b7b7b7;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  #membersRegisterTable th {
+    background: #d9eaf7;
+    color: #1f1f1f;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #membersRegisterTable tbody tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+
+  #membersRegisterTable tbody tr:hover {
+    background: #e2f0d9;
+  }
+</style>
+
+<div style="overflow-x:auto;">
+    <h3>MEMBERS REGISTER</h3>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;">
+
+  <input
+    type="text"
+    id="memberSearch"
+    placeholder="Search members..."
+    oninput="searchMembers()"
+    style="flex:1;min-width:180px;padding:10px;">
+
+  <button type="button" onclick="downloadMembers()">
+    DOWNLOAD REGISTER
+  </button>
+
+</div>
+  
+<button type="button" onclick="showFinancialOperations()">
+    BACK
+  </button>
+
+  <div style="overflow-x:auto;">
+  <table id="membersRegisterTable">
+
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Membership No.</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Date Joined</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody id="membersTableBody">
+      <tr>
+        <td colspan="7">Loading members...</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+</div>
+
+</section>
+<!-- END MEMBERS MANAGEMENT WORKSPACE -->
+
+<!-- WELFARE MANAGEMENT WORKSPACE -->
+<section id="welfareBox" style="display:none; padding:20px;">
+
+  <h2>WELFARE MANAGEMENT</h2>
+
+<p style="color:#a8b6ca;">
+  Manage welfare contributions, member benefits, fines,
+  adjustments and approval records.
+</p>
+
+<button type="button" onclick="showFinancialOperations()">
+  BACK TO FINANCIAL OPERATIONS DASHBOARD
+</button>
+
+  <!-- WELFARE ACCOUNTS -->
+  <div  style="overflow-x:auto;">
+    <h3>WELFARE ACCOUNTS</h3>
+<p style="color:#a8b6ca;">
+  View member welfare accounts, available balances and account status.
+</p>
+
+<input
+  type="text"
+  id="welfareAccountSearch"
+  placeholder="Search by membership number or member name"
+  style="width:100%;padding:10px;margin-bottom:12px;">
+    <button type="button" onclick="loadWelfareAccounts()">
+      REFRESH ACCOUNTS
+    </button>
+
+    <table style="width:100%;font-size:12px;border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th>Membership No.</th>
+          <th>Member Name</th>
+          <th>Balance (UGX)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="welfareAccountsBody">
+        <tr>
+          <td colspan="4">Loading Welfare accounts...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RECORD WELFARE TRANSACTION -->
+  <div>
+    <h3>RECORD WELFARE TRANSACTION</h3>
+<p style="color:#a8b6ca;">
+  Record a member welfare contribution, benefit, fine or account adjustment.
+  All transactions must be approved before they affect account balances.
+</p>
+    <label>Welfare Account</label>
+    <select id="welfareAccountSelect" style="width:100%;padding:10px;">
+      <option value="">Select member account</option>
+    </select>
+
+    <label>Transaction Type</label>
+    <select id="welfareTransactionType"
+      style="width:100%;padding:10px;"
+      onchange="toggleWelfareAdjustment()">
+      <option value="contribution">Contribution</option>
+      <option value="benefit">Benefit</option>
+      <option value="fine">Fine</option>
+      <option value="adjustment">Adjustment</option>
+    </select>
+
+    <div id="welfareAdjustmentBox" style="display:none;">
+      <label>Adjustment Direction</label>
+      <select id="welfareAdjustmentDirection" style="width:100%;padding:10px;">
+        <option value="">Select direction</option>
+        <option value="credit">Credit (Increase balance)</option>
+        <option value="debit">Debit (Decrease balance)</option>
+      </select>
+    </div>
+
+    <label>Amount (UGX)</label>
+    <input
+      type="number"
+      id="welfareAmount"
+      min="0.01"
+      step="0.01"
+      placeholder="Enter amount"
+      style="width:100%;padding:10px;">
+
+    <label>Reference Number</label>
+    <input
+      type="text"
+      id="welfareReference"
+      placeholder="Enter reference number"
+      style="width:100%;padding:10px;">
+
+    <label>Description</label>
+    <textarea
+      id="welfareDescription"
+      placeholder="Enter transaction description"
+      style="width:100%;padding:10px;"></textarea>
+
+    <button type="button" onclick="submitWelfareTransaction()">
+      SUBMIT FOR APPROVAL
+    </button>
+  </div>
+
+  <!-- WELFARE APPROVALS -->
+  <div style="overflow-x:auto;">
+    <h3>PENDING WELFARE APPROVALS</h3>
+<p style="color:#a8b6ca;">
+  Review Welfare transactions awaiting authorization.
+</p>
+    <button type="button" onclick="loadWelfareApprovals()">
+      REFRESH APPROVALS
+    </button>
+
+    <table style="width:100%;font-size:12px;border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Reference</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="welfareApprovalsBody">
+        <tr>
+          <td colspan="5">Loading pending approvals...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- WELFARE TRANSACTION REGISTER -->
+  <div style="overflow-x:auto;">
+    <h3>WELFARE TRANSACTIONS REGISTER</h3>
+<p style="color:#a8b6ca;">
+  View the history and approval status of recorded Welfare transactions.
+</p>
+
+<input
+  type="text"
+  id="welfareTransactionSearch"
+  placeholder="Search by reference number or transaction type"
+  style="width:100%;padding:10px;margin-bottom:12px;">
+    <button type="button" onclick="loadWelfareTransactions()">
+      REFRESH TRANSACTIONS
+    </button>
+
+    <table style="width:100%;font-size:12px;border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Reference</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="welfareTransactionsBody">
+        <tr>
+          <td colspan="5">Loading Welfare transactions...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+<!-- END WELFARE MANAGEMENT WORKSPACE -->
+
+<!-- AUDIT LOGS WORKSPACE -->
+<section id="auditLogsBox" style="display:none; padding:20px;">
+
+  <h2>AUDIT LOGS</h2>
+  <p>View and monitor important system activities.</p>
+
+  <div class="card">
+    <h3>ACTIVITY REGISTER</h3>
+
+    <input
+      type="text"
+      id="auditLogSearch"
+      placeholder="Search audit activities..."
+      oninput="searchAuditLogs()"
+      style="width:100%;padding:10px;margin-bottom:10px;"
+    >
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>User</th>
+            <th>Activity</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody id="auditLogsTableBody">
+          <tr>
+            <td colspan="4" style="text-align:center;">
+              Audit logs will appear here after database connection.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p id="auditLogsMessage"></p>
+
+  <button type="button" onclick="showAdministration()">
+    BACK
+  </button>
+
+</section>
+<!-- END AUDIT LOGS WORKSPACE -->
+
+<!-- EXPENSES WORKSPACE -->
+<section id="expensesBox" style="display:none; padding:20px;">
+
+  <h2>EXPENSES MANAGEMENT</h2>
+  <p>Record and monitor organizational expenses.</p>
+
+  <div class="card">
+    <h3>EXPENSE REGISTER</h3>
+
+    <input
+      type="text"
+      id="expenseSearch"
+      placeholder="Search expenses..."
+      oninput="searchExpenses()"
+      style="width:100%;padding:10px;margin-bottom:10px;"
+    >
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="expensesTableBody">
+          <tr>
+            <td colspan="5" style="text-align:center;">
+              Expenses will appear here after database connection.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p id="expensesMessage"></p>
+
+  <button type="button" onclick="showFinancialOperations()">
+    BACK
+  </button>
+
+</section>
+<!-- END EXPENSES WORKSPACE -->
+
+<!-- GUARANTORS WORKSPACE -->
+<section id="guarantorsBox" style="display:none; padding:20px;">
+
+  <h2>GUARANTORS MANAGEMENT</h2>
+  <p>View and monitor member guarantor records.</p>
+
+  <div>
+    <h3>GUARANTOR REGISTER</h3>
+
+    <input
+      type="text"
+      id="guarantorSearch"
+      placeholder="Search guarantors..."
+      oninput="searchGuarantors()"
+      style="width:100%;padding:10px;margin-bottom:10px;"
+    >
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Member</th>
+            <th>Guarantor</th>
+            <th>Loan Reference</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="guarantorsTableBody">
+          <tr>
+            <td colspan="5" style="text-align:center;">
+              Guarantor records will appear here after database connection.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p id="guarantorsMessage"></p>
+
+  <button type="button" onclick="showFinancialOperations()">
+    BACK
+  </button>
+
+</section>
+<!-- END GUARANTORS WORKSPACE -->
+
+<!-- INVESTMENTS WORKSPACE -->
+<section id="investmentsBox" style="display:none; padding:20px;">
+
+  <h2>INVESTMENTS MANAGEMENT</h2>
+  <p>View and monitor member and organizational investments.</p>
+
+  <div>
+    <h3>INVESTMENT REGISTER</h3>
+
+    <input
+      type="text"
+      id="investmentSearch"
+      placeholder="Search investments..."
+      oninput="searchInvestments()"
+      style="width:100%;padding:10px;margin-bottom:10px;"
+    >
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Investor</th>
+            <th>Investment Type</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="investmentsTableBody">
+          <tr>
+            <td colspan="5" style="text-align:center;">
+              Investment records will appear here after database connection.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p id="investmentsMessage"></p>
+
+  <button type="button" onclick="showFinancialOperations()">
+    BACK
+  </button>
+
+</section>
+<!-- END INVESTMENTS WORKSPACE -->
+  
+<!-- LOANS WORKSPACE -->
+<section id="loansBox" style="display:none; padding:20px;">
+
+  <h2>LOANS MANAGEMENT</h2>
+  <p>View and monitor member loan applications and repayments.</p>
+
+  <div>
+    <h3>LOAN REGISTER</h3>
+
+    <input
+      type="text"
+      id="loanSearch"
+      placeholder="Search loans..."
+      oninput="searchLoans()"
+      style="width:100%;padding:10px;margin-bottom:10px;"
+    >
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Member</th>
+            <th>Loan Reference</th>
+            <th>Principal</th>
+            <th>Balance</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="loansTableBody">
+          <tr>
+            <td colspan="6" style="text-align:center;">
+              Loan records will appear here after database connection.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p id="loansMessage"></p>
+
+  <button type="button" onclick="showFinancialOperations()">
+    BACK
+  </button>
+
+</section>
+<!-- END LOANS WORKSPACE -->
+
+<!-- REPORTS WORKSPACE -->
+<section id="reportsBox" style="display:none; padding:20px;">
+
+  <h2>REPORTS MANAGEMENT</h2>
+  <p>View and organize organizational reports.</p>
+
+  <div>
+    <h3>REPORT REGISTER</h3>
+
+    <input
+      type="text"
+      id="reportSearch"
+      placeholder="Search reports..."
+      oninput="searchReports()"
+      style="width:100%;padding:10px;margin-bottom:10px;"
+    >
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Report Title</th>
+            <th>Category</th>
+            <th>Prepared By</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="reportsTableBody">
+          <tr>
+            <td colspan="5" style="text-align:center;">
+              Reports will appear here after database connection.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p id="reportsMessage"></p>
+
+  <button type="button" onclick="showFinancialOperations()">
+    BACK
+  </button>
+
+</section>
+<!-- END REPORTS WORKSPACE -->
+  
+  <script>
+function togglePasswordVisibility() {
+  const password = document.getElementById("password");
+  const button = document.getElementById("togglePassword");
+
+  if (password.type === "password") {
+    password.type = "text";
+    button.textContent = "HIDE";
+  } else {
+    password.type = "password";
+    button.textContent = "SHOW";
+  }
+}
+</script>
+  <script>
+function togglePasswordVisibility() {
+  const password = document.getElementById("password");
+  const eye = document.getElementById("eyeIcon");
+
+  if (password.type === "password") {
+    password.type = "text";
+    eye.textContent = "🙈";
+  } else {
+    password.type = "password";
+    eye.textContent = "👁";
+  }
+}
+</script>
+
+
+<script>
+let supabaseClient = null;
+let currentSavingsAccountId = null;
+  
+// OPEN CONNECTION SETTINGS
+function openConnectionSettings() {
+
+  document.getElementById("welcomeBox").style.display = "none";
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("registerBox").style.display = "none";
+
+  document.getElementById("connectionSettings").style.display = "block";
+
+  document.getElementById("connectionFields").style.display = "block";
+  document.getElementById("settingsMessage").style.display = "none";
+
+  document.getElementById("projectUrl").value =
+    localStorage.getItem("gk_supabase_url") || "";
+
+  document.getElementById("publishableKey").value =
+    localStorage.getItem("gk_supabase_publishable_key") || "";
+}
+
+
+// SAVE CONNECTION SETTINGS
+function saveConnectionSettings() {
+
+  const url = document.getElementById("projectUrl").value.trim();
+  const key = document.getElementById("publishableKey").value.trim();
+  const message = document.getElementById("settingsMessage");
+
+  if (!url || !key) {
+    alert("Please enter both Supabase connection details.");
+    return;
+  }
+
+  if (!url.startsWith("https://")) {
+    alert("Please enter a valid HTTPS Supabase URL.");
+    return;
+  }
+
+  try {
+
+    localStorage.setItem("gk_supabase_url", url);
+    localStorage.setItem("gk_supabase_publishable_key", key);
+
+    supabaseClient = null;
+
+    document.getElementById("connectionFields").style.display = "none";
+
+    message.innerHTML = `
+      <span class="success-icon">✓</span>
+      <strong>CONNECTION SAVED SUCCESSFULLY!</strong>
+      <p>Your Supabase settings are stored on this device.</p>
+    `;
+
+    message.style.display = "block";
+
+  } catch (error) {
+    alert("Could not save settings: " + error.message);
+  }
+}
+
+  
+// CONNECT TO SUPABASE
+function connectSupabase() {
+  const projectUrl =
+    localStorage.getItem("gk_supabase_url");
+
+  const publishableKey =
+    localStorage.getItem("gk_supabase_publishable_key");
+
+  if (!projectUrl || !publishableKey) {
+    throw new Error(
+      "Supabase is not configured. Open Connection Settings first."
+    );
+  }
+
+  if (!window.supabase) {
+    throw new Error("Supabase library did not load.");
+  }
+
+  if (!supabaseClient) {
+    supabaseClient = window.supabase.createClient(
+      projectUrl,
+      publishableKey
+    );
+  }
+
+  return supabaseClient;
+}
+function toggleLoginPassword() {
+  const password = document.getElementById("password");
+  const eye = document.getElementById("passwordEyeIcon");
+  const button = document.getElementById("passwordToggle");
+
+  if (password.type === "password") {
+    password.type = "text";
+
+    eye.innerHTML = `
+      <path d="M3 3 21 21"/>
+      <path d="M10.6 10.6a2 2 0 0 0 2.8 2.8"/>
+      <path d="M9.9 5.2A10 10 0 0 1 12 5
+        c6.5 0 10 7 10 7a16 16 0 0 1-4 4.5"/>
+      <path d="M6.6 6.6C3.5 8.5 2 12 2 12
+        s3.5 7 10 7a10 10 0 0 0 4-.8"/>
+    `;
+
+    button.setAttribute("aria-label", "Hide password");
+
+  } else {
+    password.type = "password";
+
+    eye.innerHTML = `
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    `;
+
+    button.setAttribute("aria-label", "Show password");
+  }
+}
+  
+// SIGN IN
+  let currentPermissions = [];
+async function login(restore = false) {
+  const message = document.getElementById("loginMessage");
+  const button = document.getElementById("loginBtn");
+
+  try {
+    const client = connectSupabase();
+
+    let user;
+
+if (restore) {
+  const { data: sessionData, error: sessionError } =
+    await client.auth.getSession();
+
+  if (sessionError) throw sessionError;
+
+  if (!sessionData.session) {
+    return;
+  }
+
+  user = sessionData.session.user;
+
+} else {
+  const email =
+    document.getElementById("email").value.trim();
+
+  const password =
+    document.getElementById("password").value;
+
+  if (!email || !password) {
+    throw new Error("Enter your email and password.");
+  }
+
+  button.disabled = true;
+  message.textContent = "Signing in...";
+
+  const { data, error } =
+    await client.auth.signInWithPassword({
+      email,
+      password
+    });
+
+  if (error) throw error;
+
+  user = data.user;
+}
+
+
+// LOAD USER PROFILE
+const { data: profile, error: profileError } =
+  await client
+    .from("profiles")
+        .select(`
+      full_name,
+      email,
+      is_active,
+      role_id,
+      roles(role_name)
+    `)
+    .eq("id", user.id)
+    .single();
+
+if (profileError) {
+  throw new Error(
+    "Login succeeded, but your profile could not be loaded: " +
+    profileError.message
+  );
+}
+
+// CHECK ACCOUNT STATUS
+if (!profile.is_active) {
+  await client.auth.signOut();
+  throw new Error("Your account is inactive. Contact the administrator.");
+}
+    // LOAD ROLE PERMISSIONS
+const { data: permissions, error: permissionError } =
+  await client
+    .from("role_permissions")
+    .select("permission_key, can_view, can_create, can_update, can_approve, can_delete")
+    .eq("role_id", profile.role_id)
+    .eq("can_view", true);
+
+if (permissionError) {
+  throw new Error(
+    "Could not load permissions: " + permissionError.message
+  );
+}
+    currentPermissions = permissions || [];
+
+// CONTROL FINANCIAL MANAGEMENT BUTTON VISIBILITY
+
+const canOpenApprovalCentre =
+  currentPermissions.some(p => p.can_approve === true);
+
+const canOpenAdministration =
+  currentPermissions.some(p =>
+    ["audit_logs", "settings", "users"].includes(p.permission_key)
+  );
+
+document.getElementById("approvalCentreButton").style.display =
+  canOpenApprovalCentre ? "block" : "none";
+
+document.getElementById("administrationButton").style.display =
+  canOpenAdministration ? "block" : "none";
+    
+// DISPLAY AUTHORIZED MODULES
+const financialModulesBox =
+  document.getElementById("financialModules");
+
+const approvalModulesBox =
+  document.getElementById("approvalModules");
+
+const administrationModulesBox =
+  document.getElementById("administrationModules");
+
+financialModulesBox.replaceChildren();
+approvalModulesBox.replaceChildren();
+administrationModulesBox.replaceChildren();
+
+if (permissions.length === 0) {
+  financialModulesBox.textContent =
+    "No financial modules have been assigned.";
+} else {
+  permissions.forEach(permission => {
+    const module = document.createElement("button");
+
+module.textContent =
+  permission.permission_key.toUpperCase();
+
+module.type = "button";
+
+if (permission.permission_key === "savings") {
+  module.onclick = showSavings;
+}
+   if (permission.permission_key === "accounting") {
+  module.onclick = showAccounting;
+} 
+    if (permission.permission_key === "members") {
+  module.onclick = showMembers;
+}
+
+    if (permission.permission_key === "welfare") {
+  module.onclick = showWelfare;
+}
+    if (permission.permission_key === "audit_logs") {
+  module.onclick = showAuditLogs;
+}
+    if (permission.permission_key === "dashboard") {
+  module.onclick = showDashboard;
+}
+   if (permission.permission_key === "expenses") {
+  module.onclick = showExpenses;
+} 
+    if (permission.permission_key === "guarantors") {
+  module.onclick = showGuarantors;
+}
+    if (permission.permission_key === "investments") {
+  module.onclick = showInvestments;
+}
+    if (permission.permission_key === "loans") {
+  module.onclick = showLoans;
+}
+   if (permission.permission_key === "shares") {
+  module.onclick = showShares;
+} 
+    if (permission.permission_key === "reports") {
+  module.onclick = showReports;
+}
+    if (permission.permission_key === "settings") {
+  module.onclick = showSettings;
+}
+
+if (permission.permission_key === "users") {
+  module.onclick = showUsers;
+}
+const adminKeys = [
+  "dashboard",
+  "audit_logs",
+  "settings",
+  "users"
+];
+
+if (adminKeys.includes(permission.permission_key)) {
+  administrationModulesBox.appendChild(module);
+} else {
+  financialModulesBox.appendChild(module);
+}
+  });
+}
+const canApproveSavings =
+  currentPermissions.some(p =>
+    p.permission_key === "savings" && p.can_approve
+  );
+
+const canApproveAccounting =
+  currentPermissions.some(p =>
+    p.permission_key === "accounting" && p.can_approve
+  );
+const canApproveWelfare =
+  currentPermissions.some(p =>
+    p.permission_key === "welfare" && p.can_approve
+  );
+
+// SAVINGS APPROVAL BUTTON
+if (canApproveSavings) {
+  const savingsApprovalButton = document.createElement("button");
+
+  savingsApprovalButton.textContent = "SAVINGS APPROVALS";
+  savingsApprovalButton.type = "button";
+  savingsApprovalButton.onclick = showSavingsApprovals;
+
+  approvalModulesBox.appendChild(savingsApprovalButton);
+}
+
+// ACCOUNTING APPROVAL BUTTON
+if (canApproveAccounting) {
+  const accountingApprovalButton = document.createElement("button");
+
+  accountingApprovalButton.textContent = "ACCOUNTING APPROVALS";
+  accountingApprovalButton.type = "button";
+  accountingApprovalButton.onclick = showAccountingApprovals;
+
+  approvalModulesBox.appendChild(accountingApprovalButton);
+}
+  // WELFARE APPROVAL BUTTON
+if (canApproveWelfare) {
+  const welfareApprovalButton = document.createElement("button");
+
+  welfareApprovalButton.textContent = "WELFARE APPROVALS";
+  welfareApprovalButton.type = "button";
+  welfareApprovalButton.onclick = showWelfareApprovals;
+
+  approvalModulesBox.appendChild(welfareApprovalButton);
+} 
+// CONTROL FINANCIAL OVERVIEW ACCESS
+const roleName = (profile.roles?.role_name || "")
+  .trim()
+  .toLowerCase();
+
+const canViewFinancialOverview = [
+  "super administrator",
+  "accountant",
+  "auditor"
+].includes(roleName);
+
+document.getElementById("financialOverviewBox").style.display =
+  canViewFinancialOverview ? "block" : "none";
+    
+// DISPLAY DASHBOARD
+document.getElementById("loginBox").style.display = "none";
+document.getElementById("welcomeBox").style.display = "none";
+document.getElementById("registerBox").style.display = "none";
+document.getElementById("connectionSettings").style.display = "none";
+
+document.getElementById("dashboardBox").style.display = "block";
+if (canViewFinancialOverview) {
+  loadDashboardSummary();
+}
+document.getElementById("dashboardName").textContent =
+  "Name: " + profile.full_name;
+
+document.getElementById("dashboardEmail").textContent =
+  "Email: " + profile.email;
+
+document.getElementById("dashboardRole").textContent =
+  "Role: " + (profile.roles?.role_name || "Not assigned");
+
+message.textContent = "Login successful.";
+
+  } catch (error) {
+    message.textContent = "ERROR: " + error.message;
+    console.error("Login error:", error);
+  } finally {
+    button.disabled = false;
+  }
+}
+  
+// FINANCIAL OPERATIONS MENU
+// OPEN FINANCIAL OPERATIONS
+function showFinancialOperations() {
+  hideAllWorkspaces();
+
+  document.getElementById("financialOperationsBox").style.display = "block";
+}
+
+// OPEN APPROVAL CENTRE
+function showApprovalCentre() {
+  hideAllWorkspaces();
+
+  document.getElementById("approvalCentreBox").style.display = "block";
+}
+
+// OPEN ADMINISTRATION
+function showAdministration() {
+  const allowed = currentPermissions.some(p =>
+    ["audit_logs", "settings", "users"].includes(p.permission_key)
+  );
+
+  if (!allowed) {
+    alert("You are not authorized to access Administration.");
+    return;
+  }
+
+  hideAllWorkspaces();
+
+  document.getElementById("administrationBox").style.display = "block";
+}
+
+
+// OPEN MEMBER REGISTRATION
+function showMemberRegistration() {
+  const allowed = currentPermissions.some(p =>
+    ["members", "users"].includes(p.permission_key) &&
+    p.can_create === true
+  );
+
+  if (!allowed) {
+    alert("You are not authorized to register members.");
+    return;
+  }
+
+  hideAllWorkspaces();
+
+  document.getElementById("memberRegistrationBox").style.display = "block";
+}
+
+// REGISTER ACCOUNT
+async function registerUser() {
+  const message =
+    document.getElementById("registerMessage");
+
+  try {
+    const client = connectSupabase();
+
+    const fullName =
+      document.getElementById("registerName").value.trim();
+
+    const email =
+      document.getElementById("registerEmail").value.trim();
+
+    const phone =
+      document.getElementById("registerPhone").value.trim();
+
+    const password =
+      document.getElementById("registerPassword").value;
+
+    if (!fullName || !email || !password) {
+      throw new Error("Enter your name, email and password.");
+    }
+
+    if (password.length < 6) {
+      throw new Error("Password must be at least 6 characters.");
+    }
+
+    message.textContent = "Creating account...";
+
+    const { data, error } = await client.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          full_name: fullName,
+          phone: phone
+        }
+      }
+    });
+
+    if (error) throw error;
+
+    message.textContent =
+      "Account created. Check your email if confirmation is required. Membership activation requires administrator approval.";
+
+  } catch (error) {
+    message.textContent = "ERROR: " + error.message;
+  }
+}
+
+  
+// ADMINISTRATOR: REGISTER NEW MEMBER
+async function registerNewMember(event) {
+  event.preventDefault();
+
+  const message = document.getElementById(
+    "memberRegistrationMessage"
+  );
+
+  const client = connectSupabase();
+
+  const activationMethod =
+    document.getElementById("memberActivationMethod").value;
+
+  const payload = {
+    full_name: document.getElementById("newMemberName").value.trim(),
+    email: document.getElementById("newMemberEmail").value.trim(),
+    phone: document.getElementById("newMemberPhone").value.trim(),
+    date_joined: document.getElementById("newMemberDate").value,
+    activation_method: activationMethod
+  };
+
+  if (activationMethod === "immediate") {
+    payload.password =
+      document.getElementById("newMemberPassword").value;
+  }
+
+  try {
+    message.textContent = "Registering member...";
+
+    const { data, error } = await client.functions.invoke(
+      "register-member",
+      { body: payload }
+    );
+
+    if (error) throw error;
+    if (data?.error) throw new Error(data.error);
+
+    message.textContent =
+      data.message + " Membership No: " +
+      data.membership_number;
+
+    document.getElementById("memberRegistrationForm").reset();
+
+    document.getElementById("memberPasswordBox").style.display = "none";
+
+  } catch (error) {
+    message.textContent = "ERROR: " + error.message;
+  }
+}
+
+
+// SIGN OUT
+async function logout() {
+  try {
+    const client = connectSupabase();
+
+    const { error } = await client.auth.signOut();
+
+    if (error) throw error;
+
+    // Hide all workspaces
+[
+  "dashboardBox",
+  "savingsBox",
+  "savingsApprovalBox",
+  "accountingBox",
+  "accountingApprovalsBox", "membersBox"
+].forEach(id => {
+  const section = document.getElementById(id);
+  if (section) section.style.display = "none";
+});
+
+    // Open login screen
+    showLogin();
+
+    // Clear password
+    document.getElementById("password").value = "";
+
+    document.getElementById("loginMessage").textContent =
+      "You have signed out successfully.";
+
+  } catch (error) {
+    alert("Sign out error: " + error.message);
+  }
+}
+
+// RESTORE EXISTING SESSION
+async function restoreSession() {
+  try {
+    await login(true);
+  } catch (error) {
+    console.log("Session check:", error.message);
+  } 
+
+}
+restoreSession();
+  
+function showWelcome() {
+  document.getElementById("welcomeBox").style.display = "block";
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("registerBox").style.display = "none";
+  document.getElementById("connectionSettings").style.display = "none";
+}
+  function showLogin() {
+  document.getElementById("welcomeBox").style.display = "none";
+  document.getElementById("loginBox").style.display = "block";
+  document.getElementById("registerBox").style.display = "none";
+  document.getElementById("connectionSettings").style.display = "none";
+}
+
+function showRegister() {
+  document.getElementById("welcomeBox").style.display = "none";
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("registerBox").style.display = "block";
+  document.getElementById("connectionSettings").style.display = "none";
+}
+
+  // OPEN SAVINGS WORKSPACE
+
+async function showSavings() {
+  hideAllWorkspaces();
+
+document.getElementById("savingsBox").style.display = "block";
+
+  const balance = document.getElementById("savingsBalance");
+  const accountName = document.getElementById("savingsAccountName");
+  const status = document.getElementById("savingsAccountStatus");
+
+  balance.textContent = "Loading...";
+  accountName.textContent = "";
+  status.textContent = "";
+
+  try {
+    const client = connectSupabase();
+
+    const { data: userData, error: userError } =
+      await client.auth.getUser();
+
+    if (userError) throw userError;
+
+    const { data: member, error: memberError } =
+      await client
+        .from("members")
+        .select(`
+          id,
+          savings_accounts (
+            id,
+            account_name,
+            currency,
+            balance,
+            account_status
+          )
+        `)
+        .eq("profile_id", userData.user.id)
+        .maybeSingle();
+
+    if (memberError) throw memberError;
+
+    if (!member || !member.savings_accounts?.length) {
+      balance.textContent = "UGX 0";
+      accountName.textContent = "No savings account found.";
+      status.textContent = "Contact the SACCO administrator.";
+      return;
+    }
+
+    const account = member.savings_accounts[0];
+
+    currentSavingsAccountId = account.id;
+
+    balance.textContent =
+      account.currency + " " +
+      Number(account.balance).toLocaleString("en-UG");
+
+    accountName.textContent = account.account_name;
+    status.textContent = "Account status: " + account.account_status;
+
+  } catch (error) {
+    balance.textContent = "Unable to load";
+    status.textContent = error.message;
+  }
+  await loadSavingsHistory();
+}
+async function loadSavingsHistory() {
+  const history = document.getElementById("savingsHistory");
+
+  history.textContent = "Loading transaction history...";
+
+  try {
+    const client = connectSupabase();
+
+    const { data, error } = await client
+      .from("savings_transactions")
+      .select(`
+        transaction_type,
+        amount,
+        reference_number,
+        description,
+        transaction_status,
+        transaction_date
+      `)
+      .eq("savings_account_id", currentSavingsAccountId)
+      .order("created_at", { ascending: false });
+
+    if (error) throw error;
+
+    history.replaceChildren();
+
+    if (!data || data.length === 0) {
+      history.textContent = "No transactions found.";
+      return;
+    }
+
+    data.forEach(transaction => {
+      const item = document.createElement("div");
+
+      item.style.padding = "12px";
+      item.style.fontSize = "12px";
+item.style.lineHeight = "1.5";
+      item.style.margin = "8px 0";
+      item.style.border = "1px solid #777";
+      item.style.borderRadius = "8px";
+
+      const date = transaction.transaction_date
+        ? new Date(transaction.transaction_date).toLocaleString()
+        : "Date unavailable";
+
+      const type = document.createElement("div");
+type.textContent =
+  "TRANSACTION: " + transaction.transaction_type.toUpperCase();
+
+const amount = document.createElement("div");
+amount.textContent =
+  "AMOUNT: UGX " +
+  Number(transaction.amount).toLocaleString("en-UG");
+
+const status = document.createElement("div");
+status.textContent =
+  "STATUS: " + transaction.transaction_status.toUpperCase();
+
+const dateLine = document.createElement("div");
+dateLine.textContent = "DATE: " + date;
+
+type.style.fontWeight = "bold";
+amount.style.fontWeight = "bold";
+status.style.color =
+  transaction.transaction_status === "posted"
+    ? "#22c55e"
+    : transaction.transaction_status === "pending"
+    ? "#f59e0b"
+    : "#ef4444";
+
+[type, amount, status, dateLine].forEach(line => {
+  line.style.fontSize = "12px";
+  line.style.marginBottom = "4px";
+  item.appendChild(line);
+});
+
+history.appendChild(item);
+    });
+
+  } catch (error) {
+    history.textContent =
+      "History error: " + error.message;
+  }
+}
+
+// RETURN TO DASHBOARD
+
+// HIDE ALL APPLICATION WORKSPACES
+function hideAllWorkspaces() {
+  const sections = [
+    "loginBox",
+    "welcomeBox",
+    "registerBox",
+    "connectionSettings",
+    "dashboardBox",
+    "financialManagementBox",
+    "financialOperationsBox",
+    "approvalCentreBox",
+    "administrationBox",
+    "memberRegistrationBox",
+    "settingsBox",
+    "usersBox",
+    "savingsBox",
+    "savingsApprovalBox",
+    "accountingBox",
+    "accountingApprovalsBox",
+    "membersBox",
+    "sharesBox",
+    "welfareBox",
+    "auditLogsBox",
+    "expensesBox",
+    "guarantorsBox",
+    "investmentsBox",
+    "loansBox",
+    "reportsBox"
+  ];
+
+  sections.forEach(id => {
+    const section = document.getElementById(id);
+    if (section) section.style.display = "none";
+  });
+}
+
+// OPEN FINANCIAL MANAGEMENT
+function showFinancialManagement() {
+  hideAllWorkspaces();
+
+  const financialManagementBox =
+    document.getElementById("financialManagementBox");
+
+  if (financialManagementBox) {
+    financialManagementBox.style.display = "block";
+  } else {
+    alert("Financial Management workspace was not found.");
+  }
+}
+  
+ // OPEN LOANS WORKSPACE
+function showLoans() {
+  hideAllWorkspaces();
+  document.getElementById("loansBox").style.display = "block";
+}
+
+// OPEN REPORTS WORKSPACE
+function showReports() {
+  hideAllWorkspaces();
+  document.getElementById("reportsBox").style.display = "block";
+} 
+  
+// OPEN AUDIT LOGS WORKSPACE
+function showAuditLogs() {
+  hideAllWorkspaces();
+
+  const auditLogsBox = document.getElementById("auditLogsBox");
+
+  if (auditLogsBox) {
+    auditLogsBox.style.display = "block";
+  } else {
+    alert("Audit Logs workspace was not found.");
+  }
+}
+
+  // OPEN EXPENSES WORKSPACE
+function showExpenses() {
+  hideAllWorkspaces();
+
+  const expensesBox = document.getElementById("expensesBox");
+
+  if (expensesBox) {
+    expensesBox.style.display = "block";
+  } else {
+    alert("Expenses workspace was not found.");
+  }
+}
+
+  // OPEN GUARANTORS WORKSPACE
+function showGuarantors() {
+  hideAllWorkspaces();
+
+  const guarantorsBox = document.getElementById("guarantorsBox");
+
+  if (guarantorsBox) {
+    guarantorsBox.style.display = "block";
+  } else {
+    alert("Guarantors workspace was not found.");
+  }
+}
+
+// OPEN INVESTMENTS WORKSPACE
+function showInvestments() {
+  hideAllWorkspaces();
+
+  const investmentsBox = document.getElementById("investmentsBox");
+
+  if (investmentsBox) {
+    investmentsBox.style.display = "block";
+  } else {
+    alert("Investments workspace was not found.");
+  }
+}
+  
+// SEARCH AUDIT LOGS
+function searchAuditLogs() {
+  const searchInput = document.getElementById("auditLogSearch");
+  const tableBody = document.getElementById("auditLogsTableBody");
+
+  if (!searchInput || !tableBody) return;
+
+  const searchText = searchInput.value.toLowerCase();
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(searchText)
+      ? ""
+      : "none";
+  });
+}
+// SEARCH EXPENSES
+function searchExpenses() {
+  const searchInput = document.getElementById("expenseSearch");
+  const tableBody = document.getElementById("expensesTableBody");
+
+  if (!searchInput || !tableBody) return;
+
+  const searchText = searchInput.value.toLowerCase();
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(searchText)
+      ? ""
+      : "none";
+  });
+}
+
+// SEARCH GUARANTORS
+function searchGuarantors() {
+  const searchInput = document.getElementById("guarantorSearch");
+  const tableBody = document.getElementById("guarantorsTableBody");
+
+  if (!searchInput || !tableBody) return;
+
+  const searchText = searchInput.value.toLowerCase();
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(searchText)
+      ? ""
+      : "none";
+  });
+}
+
+  // SEARCH INVESTMENTS
+function searchInvestments() {
+  const searchInput = document.getElementById("investmentSearch");
+  const tableBody = document.getElementById("investmentsTableBody");
+
+  if (!searchInput || !tableBody) return;
+
+  const searchText = searchInput.value.toLowerCase();
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(searchText)
+      ? ""
+      : "none";
+  });
+}
+
+  // SEARCH LOANS
+function searchLoans() {
+  const searchInput = document.getElementById("loanSearch");
+  const tableBody = document.getElementById("loansTableBody");
+
+  if (!searchInput || !tableBody) return;
+
+  const searchText = searchInput.value.toLowerCase();
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(searchText)
+      ? ""
+      : "none";
+  });
+}
+
+// SEARCH REPORTS
+function searchReports() {
+  const searchInput = document.getElementById("reportSearch");
+  const tableBody = document.getElementById("reportsTableBody");
+
+  if (!searchInput || !tableBody) return;
+
+  const searchText = searchInput.value.toLowerCase();
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(searchText)
+      ? ""
+      : "none";
+  });
+}
+  
+function showDashboard() {
+  hideAllWorkspaces();
+
+  const dashboard = document.getElementById("dashboardBox");
+
+  if (dashboard) {
+    dashboard.style.display = "block";
+    loadDashboardSummary();
+  } else {
+    alert("Dashboard section was not found.");
+  }
+}
+
+ // OPEN SHARES MANAGEMENT
+function showShares() {
+  hideAllWorkspaces();
+
+  const sharesBox = document.getElementById("sharesBox");
+
+  if (sharesBox) {
+    sharesBox.style.display = "block";
+  } else {
+    alert("Shares Management workspace was not found.");
+  }
+} 
+
+  // OPEN SYSTEM SETTINGS
+function showSettings() {
+  hideAllWorkspaces();
+
+  const settingsBox = document.getElementById("settingsBox");
+
+  if (settingsBox) {
+    settingsBox.style.display = "block";
+  } else {
+    alert("Settings workspace was not found.");
+  }
+}
+
+// OPEN USER MANAGEMENT
+function showUsers() {
+  hideAllWorkspaces();
+
+  const usersBox = document.getElementById("usersBox");
+
+  if (usersBox) {
+    usersBox.style.display = "block";
+  } else {
+    alert("User Management workspace was not found.");
+  }
+}
+
+  // TEMPORARY SHARES FRONTEND ACTIONS
+
+function registerShare() {
+  alert("Share registration will be activated after database integration.");
+}
+
+function purchaseShares() {
+  alert("Share purchases will be activated after database integration.");
+}
+
+function transferShares() {
+  alert("Share transfers will be activated after database integration.");
+}
+
+function recordDividend() {
+  alert("Dividend records will be activated after database integration.");
+}
+
+function generateSharesReport() {
+  alert("Shares reports will be activated after database integration.");
+}
+
+function exportSharesReport() {
+  alert("Shares Excel export will be activated after database integration.");
+}
+
+// OPEN MEMBERS MANAGEMENT
+
+async function showMembers() {
+  hideAllWorkspaces();
+
+  const membersBox = document.getElementById("membersBox");
+
+  if (membersBox) {
+    membersBox.style.display = "block";
+    await loadMembers();
+  } else {
+    alert("Members Management section was not found.");
+  }
+}
+
+
+ // LOAD MEMBERS REGISTER
+async function loadMembers() {
+  const client = connectSupabase();
+  const tableBody = document.getElementById("membersTableBody");
+
+  if (!tableBody) return;
+
+  tableBody.innerHTML =
+    '<tr><td colspan="6">Loading members...</td></tr>';
+
+  try {
+    const { data: members, error } = await client
+      .from("members")
+      .select(`
+        membership_number,
+        date_joined,
+        membership_status,
+      profiles!members_profile_id_fkey ( 
+          full_name,
+          email,
+          phone
+        )
+      `)
+      .order("created_at", { ascending: false });
+
+    if (error) throw error;
+
+    if (!members || members.length === 0) {
+      tableBody.innerHTML =
+        '<tr><td colspan="6">No members found.</td></tr>';
+      return;
+    }
+
+  tableBody.innerHTML = members.map((member, index) => {
+      const profile = member.profiles || {};
+
+      return `
+  <tr>
+    <td>${index + 1}</td>
+    <td>${member.membership_number || ""}</td>
+    <td>${profile.full_name || ""}</td>
+    <td>${profile.email || ""}</td>
+    <td>${profile.phone || ""}</td>
+    <td>${member.date_joined || ""}</td>
+    <td>${member.membership_status || ""}</td>
+  </tr>
+`;
+    }).join("");
+
+  } catch (error) {
+    console.error("Members loading error:", error);
+
+    tableBody.innerHTML =
+      '<tr><td colspan="7">Unable to load members: ' +
+      error.message +
+      '</td></tr>';
+  }
+} 
+
+async function loadWelfareAccounts() {
+  const client = connectSupabase();
+
+  const tableBody = document.getElementById("welfareAccountsBody");
+  const accountSelect = document.getElementById("welfareAccountSelect");
+
+  if (!tableBody || !accountSelect) return;
+
+  tableBody.innerHTML =
+    '<tr><td colspan="4">Loading Welfare accounts...</td></tr>';
+
+  accountSelect.innerHTML =
+    '<option value="">Loading accounts...</option>';
+
+  try {
+    const { data: accounts, error } = await client
+      .from("welfare_accounts")
+      .select(`
+        id,
+        balance,
+        currency,
+        account_status,
+        members!welfare_accounts_member_id_fkey (
+          membership_number,
+          profiles!members_profile_id_fkey (
+            full_name
+          )
+        )
+      `)
+      .order("created_at", { ascending: false });
+
+    if (error) throw error;
+
+    if (!accounts || accounts.length === 0) {
+      tableBody.innerHTML =
+        '<tr><td colspan="4">No Welfare accounts found.</td></tr>';
+
+      accountSelect.innerHTML =
+        '<option value="">No accounts available</option>';
+
+      return;
+    }
+
+    tableBody.innerHTML = accounts.map(account => {
+      const member = account.members || {};
+      const profile = member.profiles || {};
+
+      return `
+        <tr>
+          <td>${member.membership_number || ""}</td>
+          <td>${profile.full_name || ""}</td>
+          <td>${Number(account.balance).toLocaleString()}</td>
+          <td>${account.account_status || ""}</td>
+        </tr>
+      `;
+    }).join("");
+
+    accountSelect.innerHTML =
+      '<option value="">Select member account</option>' +
+      accounts
+        .filter(account => account.account_status === "active")
+        .map(account => {
+          const member = account.members || {};
+          const profile = member.profiles || {};
+
+          return `
+            <option value="${account.id}">
+              ${member.membership_number || ""} - ${profile.full_name || "Unknown"} 
+              (UGX ${Number(account.balance).toLocaleString()})
+            </option>
+          `;
+        }).join("");
+
+  } catch (error) {
+    console.error("Welfare accounts loading error:", error);
+
+    tableBody.innerHTML =
+      '<tr><td colspan="4">Unable to load Welfare accounts: ' +
+      error.message +
+      '</td></tr>';
+
+    accountSelect.innerHTML =
+      '<option value="">Unable to load accounts</option>';
+  }
+}
+
+
+async function submitWelfareTransaction() {
+  const client = connectSupabase();
+
+  const accountId =
+    document.getElementById("welfareAccountSelect").value;
+
+  const type =
+    document.getElementById("welfareTransactionType").value;
+
+  const amount =
+    Number(document.getElementById("welfareAmount").value);
+
+  const reference =
+    document.getElementById("welfareReference").value.trim();
+
+  const description =
+    document.getElementById("welfareDescription").value.trim();
+
+  const direction =
+    document.getElementById("welfareAdjustmentDirection").value;
+
+  if (!accountId) {
+    alert("Please select a Welfare account.");
+    return;
+  }
+
+  if (!amount || amount <= 0) {
+    alert("Please enter a valid amount.");
+    return;
+  }
+
+  if (!reference) {
+    alert("Please enter a reference number.");
+    return;
+  }
+
+  if (type === "adjustment" && !direction) {
+    alert("Please select an adjustment direction.");
+    return;
+  }
+
+  try {
+    const { data, error } = await client.rpc(
+      "submit_welfare_transaction",
+      {
+        p_welfare_account_id: accountId,
+        p_transaction_type: type,
+        p_amount: amount,
+        p_reference_number: reference,
+        p_description: description || null,
+        p_adjustment_direction:
+          type === "adjustment" ? direction : null
+      }
+    );
+
+    if (error) throw error;
+
+    alert("Welfare transaction submitted successfully for approval.");
+
+    document.getElementById("welfareAmount").value = "";
+    document.getElementById("welfareReference").value = "";
+    document.getElementById("welfareDescription").value = "";
+    document.getElementById("welfareAdjustmentDirection").value = "";
+
+    await loadWelfareApprovals();
+    await loadWelfareTransactions();
+    await loadWelfareAccounts();
+
+  } catch (error) {
+    console.error("Welfare submission error:", error);
+    alert("Welfare transaction failed: " + error.message);
+  }
+}
+
+  function toggleWelfareAdjustment() {
+  const type =
+    document.getElementById("welfareTransactionType").value;
+
+  const adjustmentBox =
+    document.getElementById("welfareAdjustmentBox");
+
+  if (adjustmentBox) {
+    adjustmentBox.style.display =
+      type === "adjustment" ? "block" : "none";
+  }
+}
+
+async function loadWelfareApprovals() {
+  const client = connectSupabase();
+  const tableBody =
+    document.getElementById("welfareApprovalsBody");
+
+  if (!tableBody) return;
+
+  tableBody.innerHTML =
+    '<tr><td colspan="5">Loading pending approvals...</td></tr>';
+
+  try {
+    const { data: transactions, error } = await client
+      .from("welfare_transactions")
+      .select(`
+        id,
+        transaction_date,
+        reference_number,
+        transaction_type,
+        amount,
+        transaction_status
+      `)
+      .eq("transaction_status", "pending")
+      .order("transaction_date", { ascending: false });
+
+    if (error) throw error;
+
+    if (!transactions || transactions.length === 0) {
+      tableBody.innerHTML =
+        '<tr><td colspan="5">No pending Welfare approvals.</td></tr>';
+      return;
+    }
+
+    tableBody.innerHTML = transactions.map(transaction => `
+      <tr>
+        <td>${transaction.transaction_date
+          ? new Date(transaction.transaction_date).toLocaleDateString()
+          : ""}</td>
+        <td>${transaction.reference_number || ""}</td>
+        <td>${transaction.transaction_type || ""}</td>
+        <td>UGX ${Number(transaction.amount).toLocaleString()}</td>
+        <td>
+          <button type="button"
+            onclick="processWelfareApproval('${transaction.id}', 'approved')">
+            APPROVE
+          </button>
+          <button type="button"
+            onclick="processWelfareApproval('${transaction.id}', 'rejected')">
+            REJECT
+          </button>
+        </td>
+      </tr>
+    `).join("");
+
+  } catch (error) {
+    console.error("Welfare approvals loading error:", error);
+
+    tableBody.innerHTML =
+      '<tr><td colspan="5">Unable to load approvals: ' +
+      error.message +
+      '</td></tr>';
+  }
+}
+
+async function processWelfareApproval(transactionId, decision) {
+  const client = connectSupabase();
+
+  const action = decision === "approved" ? "approve" : "reject";
+
+  if (!confirm("Are you sure you want to " + action + " this Welfare transaction?")) {
+    return;
+  }
+
+  const note = prompt("Enter an approval or rejection note (optional):");
+
+  if (note === null) {
+    return;
+  }
+
+  try {
+    const { data, error } = await client.rpc(
+      "process_welfare_approval",
+      {
+        p_transaction_id: transactionId,
+        p_decision: decision,
+        p_note: note.trim() || null
+      }
+    );
+
+    if (error) throw error;
+
+    alert("Welfare transaction " + action + "d successfully.");
+
+    await loadWelfareApprovals();
+    await loadWelfareTransactions();
+    await loadWelfareAccounts();
+
+  } catch (error) {
+    console.error("Welfare approval error:", error);
+    alert("Welfare approval failed: " + error.message);
+  }
+}
+
+async function loadWelfareTransactions() {
+  const client = connectSupabase();
+
+  const tableBody =
+    document.getElementById("welfareTransactionsBody");
+
+  if (!tableBody) return;
+
+  tableBody.innerHTML =
+    '<tr><td colspan="5">Loading Welfare transactions...</td></tr>';
+
+  try {
+    const { data: transactions, error } = await client
+      .from("welfare_transactions")
+      .select(`
+        transaction_date,
+        reference_number,
+        transaction_type,
+        amount,
+        transaction_status
+      `)
+      .order("transaction_date", { ascending: false });
+
+    if (error) throw error;
+
+    if (!transactions || transactions.length === 0) {
+      tableBody.innerHTML =
+        '<tr><td colspan="5">No Welfare transactions found.</td></tr>';
+      return;
+    }
+
+    tableBody.innerHTML = transactions.map(transaction => `
+      <tr>
+        <td>${transaction.transaction_date
+          ? new Date(transaction.transaction_date).toLocaleDateString()
+          : ""}</td>
+        <td>${transaction.reference_number || ""}</td>
+        <td>${transaction.transaction_type || ""}</td>
+        <td>UGX ${Number(transaction.amount).toLocaleString()}</td>
+        <td>${transaction.transaction_status || ""}</td>
+      </tr>
+    `).join("");
+
+  } catch (error) {
+    console.error("Welfare transactions loading error:", error);
+
+    tableBody.innerHTML =
+      '<tr><td colspan="5">Unable to load transactions: ' +
+      error.message +
+      '</td></tr>';
+  }
+}
+
+  
+// SEARCH MEMBERS REGISTER
+function searchMembers() {
+  const searchInput =
+    document.getElementById("memberSearch");
+
+  const tableBody =
+    document.getElementById("membersTableBody");
+
+  if (!searchInput || !tableBody) return;
+
+  const searchText = searchInput.value.toLowerCase();
+
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach(row => {
+    const rowText = row.textContent.toLowerCase();
+
+    row.style.display =
+      rowText.includes(searchText) ? "" : "none";
+  });
+}
+
+// DOWNLOAD MEMBERS REGISTER
+function downloadMembers() {
+  const table = document.getElementById("membersRegisterTable");
+
+  if (!table) {
+    alert("Members register not found.");
+    return;
+  }
+
+  const headers = Array.from(
+    table.querySelectorAll("thead th")
+  ).map(cell => cell.innerText.trim());
+
+  const rows = Array.from(
+    document.querySelectorAll("#membersTableBody tr")
+  ).filter(row => !row.querySelector("[colspan]"));
+
+  if (rows.length === 0) {
+    alert("No member records available to download.");
+    return;
+  }
+
+  const csvRows = [headers, ...rows.map(row =>
+    Array.from(row.querySelectorAll("td")).map(cell => {
+      let value = cell.innerText.trim();
+
+      // Protect spreadsheet cells from formula execution
+      if (/^[\s]*[=+\-@]/.test(value)) {
+        value = "'" + value;
+      }
+
+      return '"' + value.replace(/"/g, '""') + '"';
+    })
+  )];
+
+  const csvContent =
+    "\uFEFF" +
+    csvRows.map(row => row.join(",")).join("\r\n");
+
+  const blob = new Blob([csvContent], {
+    type: "text/csv;charset=utf-8;"
+  });
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "Members_Register.csv";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  URL.revokeObjectURL(url);
+}
+  
+// LOAD RECENT TRANSACTIONS INDEPENDENTLY
+async function loadRecentTransactions() {
+  const recentBody = document.getElementById("dashRecentTransactions");
+
+  if (!recentBody) return;
+
+  recentBody.innerHTML =
+    '<tr><td colspan="4">Loading transactions...</td></tr>';
+
+  try {
+    const client = connectSupabase();
+
+    const { data, error } = await client
+      .from("accounting_transactions")
+      .select("transaction_type, amount, transaction_date, approval_status")
+      .order("transaction_date", { ascending: false })
+      .limit(5);
+
+    if (error) throw error;
+
+    recentBody.replaceChildren();
+
+    if (!data || data.length === 0) {
+      recentBody.textContent = "No transactions found.";
+      return;
+    }
+
+    const formatUGX = amount =>
+      "UGX " + Number(amount || 0).toLocaleString("en-UG");
+
+    data.forEach(row => {
+      const tr = document.createElement("tr");
+
+      [
+        row.transaction_date || "-",
+        row.transaction_type || "-",
+        formatUGX(row.amount),
+        row.approval_status || "-"
+      ].forEach(value => {
+        const td = document.createElement("td");
+        td.textContent = value;
+        td.style.padding = "8px 4px";
+        td.style.fontSize = "12px";
+        tr.appendChild(td);
+      });
+
+      recentBody.appendChild(tr);
+    });
+
+  } catch (error) {
+    console.error("Recent transactions error:", error);
+
+    recentBody.innerHTML = "";
+
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+
+    td.colSpan = 4;
+    td.textContent = "Error loading transactions: " + error.message;
+
+    tr.appendChild(td);
+    recentBody.appendChild(tr);
+  }
+}
+
+// LOAD LIVE DASHBOARD SUMMARY
+async function loadDashboardSummary() {
+  loadRecentTransactions();
+
+  const client = connectSupabase();
+
+  try {
+    const formatUGX = amount =>
+      "UGX " + Number(amount || 0).toLocaleString("en-UG");
+
+    // ACTIVE MEMBERS
+    const { count: members, error: membersError } = await client
+      .from("members")
+      .select("*", { count: "exact", head: true })
+      .eq("membership_status", "active");
+
+    if (membersError) throw membersError;
+
+    document.getElementById("dashTotalMembers").textContent =
+      members ?? 0;
+
+    // ACTIVE SAVINGS
+    const { data: savings, error: savingsError } = await client
+      .from("savings_accounts")
+      .select("balance")
+      .eq("account_status", "active");
+
+    if (savingsError) throw savingsError;
+
+    document.getElementById("dashTotalSavings").textContent =
+      formatUGX((savings || []).reduce(
+        (sum, row) => sum + Number(row.balance || 0), 0
+      ));
+
+    // ACTIVE LOANS
+    const { data: loans, error: loansError } = await client
+      .from("loans")
+      .select("outstanding_balance")
+      .eq("loan_status", "active");
+
+    if (loansError) throw loansError;
+
+    document.getElementById("dashTotalLoans").textContent =
+      formatUGX((loans || []).reduce(
+        (sum, row) => sum + Number(row.outstanding_balance || 0), 0
+      ));
+
+    // ACTIVE INVESTMENTS
+    const { data: investments, error: investmentsError } = await client
+      .from("investments")
+      .select("current_value")
+      .eq("investment_status", "active");
+
+    if (investmentsError) throw investmentsError;
+
+    document.getElementById("dashTotalInvestments").textContent =
+      formatUGX((investments || []).reduce(
+        (sum, row) => sum + Number(row.current_value || 0), 0
+      ));
+
+    // ACTIVE SHARES
+    const { data: shares, error: sharesError } = await client
+      .from("share_accounts")
+      .select("total_value")
+      .eq("account_status", "active");
+
+    if (sharesError) throw sharesError;
+
+    document.getElementById("dashTotalShares").textContent =
+      formatUGX((shares || []).reduce(
+        (sum, row) => sum + Number(row.total_value || 0), 0
+      ));
+
+    // ACTIVE WELFARE
+    const { data: welfare, error: welfareError } = await client
+      .from("welfare_accounts")
+      .select("balance")
+      .eq("account_status", "active");
+
+    if (welfareError) throw welfareError;
+
+    document.getElementById("dashTotalWelfare").textContent =
+      formatUGX((welfare || []).reduce(
+        (sum, row) => sum + Number(row.balance || 0), 0
+      ));
+
+// PENDING SAVINGS APPROVALS
+const { count: pendingSavings, error: pendingSavingsError } =
+  await client
+    .from("savings_transactions")
+    .select("*", { count: "exact", head: true })
+    .eq("transaction_status", "pending");
+
+if (pendingSavingsError) throw pendingSavingsError;
+
+document.getElementById("dashPendingSavings").textContent =
+  pendingSavings ?? 0;
+
+
+// PENDING ACCOUNTING APPROVALS
+const { count: pendingAccounting, error: pendingAccountingError } =
+  await client
+    .from("accounting_transactions")
+    .select("*", { count: "exact", head: true })
+    .eq("approval_status", "pending");
+
+if (pendingAccountingError) throw pendingAccountingError;
+
+document.getElementById("dashPendingAccounting").textContent =
+  pendingAccounting ?? 0;
+    
+    // APPROVED ACCOUNTING TOTALS
+    const { data: transactions, error: accountingError } = await client
+      .from("accounting_transactions")
+      .select("transaction_type, amount")
+      .eq("approval_status", "approved");
+
+    if (accountingError) throw accountingError;
+
+    let income = 0;
+    let expenses = 0;
+
+    (transactions || []).forEach(row => {
+      if (row.transaction_type === "income") {
+        income += Number(row.amount || 0);
+      } else if (row.transaction_type === "expense") {
+        expenses += Number(row.amount || 0);
+      }
+    });
+
+    document.getElementById("dashTotalIncome").textContent =
+      formatUGX(income);
+
+    document.getElementById("dashTotalExpenses").textContent =
+      formatUGX(expenses);
+
+// LOAD RECENT ACCOUNTING TRANSACTIONS
+const { data: recentTransactions, error: recentError } =
+  await client
+    .from("accounting_transactions")
+    .select("transaction_type, amount, transaction_date, approval_status")
+    .order("transaction_date", { ascending: false })
+    .limit(5);
+
+if (recentError) throw recentError;
+
+const recentBody = document.getElementById("dashRecentTransactions");
+if (!recentBody) {
+  console.error("Dashboard recent transactions element was not found.");
+  return;
+}
+recentBody.innerHTML = "";
+
+if (!recentTransactions || recentTransactions.length === 0) {
+  recentBody.textContent = "No transactions found.";
+} else {
+  recentTransactions.forEach(row => {
+    const tr = document.createElement("tr");
+
+    const dateCell = document.createElement("td");
+    dateCell.textContent = row.transaction_date || "-";
+
+    const typeCell = document.createElement("td");
+    typeCell.textContent = row.transaction_type || "-";
+
+    const amountCell = document.createElement("td");
+    amountCell.textContent = formatUGX(row.amount);
+
+    const statusCell = document.createElement("td");
+    statusCell.textContent = row.approval_status || "-";
+
+    [dateCell, typeCell, amountCell, statusCell].forEach(cell => {
+      cell.style.padding = "8px 4px";
+      cell.style.fontSize = "12px";
+      tr.appendChild(cell);
+    });
+
+    recentBody.appendChild(tr);
+  });
+}
+  
+  }  
+  catch (error) {
+    console.error("Dashboard loading error:", error);
+    alert("Dashboard loading error: " + error.message);
+  }
+}
+
+  
+  function showSavingsApprovals() {
+  hideAllWorkspaces();
+  document.getElementById("savingsApprovalBox").style.display = "block";
+
+  loadPendingDeposits();
+    loadPendingWithdrawals();
+}
+
+  async function requestDeposit() {
+  const amount = Number(
+    document.getElementById("depositAmount").value
+  );
+
+  const source =
+    document.getElementById("depositSource").value;
+
+  const message =
+    document.getElementById("savingsMessage");
+
+  try {
+    if (!currentSavingsAccountId) {
+      throw new Error("Savings account not loaded. Reopen Savings.");
+    }
+
+    if (!amount || amount <= 0) {
+      throw new Error("Enter a valid deposit amount.");
+    }
+
+    if (amount < 500) {
+      throw new Error("Minimum deposit is UGX 500.");
+    }
+
+    message.textContent = "Submitting deposit request...";
+
+    const client = connectSupabase();
+
+    const { data, error } = await client.rpc(
+      "request_savings_deposit",
+      {
+        _savings_account_id: currentSavingsAccountId,
+        _amount: amount,
+        _payment_source: source,
+        _description: "Savings deposit"
+      }
+    );
+
+    if (error) throw error;
+
+    message.textContent =
+      "Deposit request submitted successfully. Awaiting approval.";
+
+    document.getElementById("depositAmount").value = "";
+
+  } catch (error) {
+    message.textContent = "Deposit error: " + error.message;
+  }
+}
+
+ async function requestWithdrawal() {
+  const amount = Number(
+    document.getElementById("withdrawAmount").value
+  );
+
+  const source =
+    document.getElementById("withdrawSource").value;
+
+  const message =
+    document.getElementById("savingsMessage");
+
+  try {
+    if (!currentSavingsAccountId) {
+      throw new Error("Savings account not loaded. Reopen Savings.");
+    }
+
+    if (!amount || amount <= 0) {
+      throw new Error("Enter a valid withdrawal amount.");
+    }
+
+    message.textContent = "Submitting withdrawal request...";
+
+    const client = connectSupabase();
+
+    const { data, error } = await client.rpc(
+      "request_savings_withdrawal",
+      {
+        _savings_account_id: currentSavingsAccountId,
+        _amount: amount,
+        _payment_source: source,
+        _description: "Savings withdrawal"
+      }
+    );
+
+    if (error) throw error;
+
+    message.textContent =
+      "Withdrawal request submitted successfully. Awaiting approval.";
+
+    document.getElementById("withdrawAmount").value = "";
+
+    await loadSavingsHistory();
+
+  } catch (error) {
+    message.textContent =
+      "Withdrawal error: " + error.message;
+  }
+}
+ 
+  async function loadPendingDeposits() {
+  const list = document.getElementById("pendingDepositsList");
+  const message = document.getElementById("approvalMessage");
+
+  list.textContent = "Loading pending deposits...";
+  message.textContent = "";
+
+  try {
+    const client = connectSupabase();
+
+    const { data, error } = await client
+      .from("savings_transactions")
+      .select(`
+        id,
+        savings_account_id,
+        amount,
+        description,
+        transaction_type,
+        transaction_status,
+        created_at
+      `)
+      .eq("transaction_status", "pending")
+      .eq("transaction_type", "deposit")
+      .order("created_at", { ascending: true });
+
+    if (error) throw error;
+
+    list.replaceChildren();
+
+    if (!data || data.length === 0) {
+      list.textContent = "No pending deposits found.";
+      return;
+    }
+
+    data.forEach(transaction => {
+      const item = document.createElement("div");
+
+      item.style.padding = "8px";
+      item.style.margin = "10px 0";
+      item.style.border = "1px solid #777";
+      item.style.borderRadius = "10px";
+
+      const details = document.createElement("p");
+      details.textContent =
+        "Amount: UGX " +
+        Number(transaction.amount).toLocaleString("en-UG") +
+        " | Status: " + transaction.transaction_status;
+
+      const approveButton = document.createElement("button");
+      approveButton.textContent = "APPROVE DEPOSIT";
+      approveButton.type = "button";
+      approveButton.onclick = () =>
+        approveSavingsDeposit(transaction.id);
+
+      item.append(details, approveButton);
+      list.appendChild(item);
+    });
+
+  } catch (error) {
+    list.textContent = "Error: " + error.message;
+  }
+}
+
+async function loadPendingWithdrawals() {
+  const list = document.getElementById("pendingWithdrawalsList");
+  const message = document.getElementById("withdrawalApprovalMessage");
+
+  list.textContent = "Loading pending withdrawals...";
+  message.textContent = "";
+
+  try {
+    const client = connectSupabase();
+
+    const { data, error } = await client
+      .from("savings_transactions")
+      .select(`
+        id,
+        savings_account_id,
+        amount,
+        description,
+        transaction_type,
+        transaction_status,
+        created_at
+      `)
+      .eq("transaction_status", "pending")
+      .eq("transaction_type", "withdrawal")
+      .order("created_at", { ascending: true });
+
+    if (error) throw error;
+
+    list.replaceChildren();
+
+    if (!data || data.length === 0) {
+      list.textContent = "No pending withdrawals found.";
+      return;
+    }
+
+    data.forEach(transaction => {
+      const item = document.createElement("div");
+      item.style.padding = "8px";
+      item.style.margin = "8px 0";
+      item.style.border = "1px solid #777";
+      item.style.borderRadius = "8px";
+      item.style.fontSize = "12px";
+
+      const details = document.createElement("p");
+      details.textContent =
+        "Amount: UGX " +
+        Number(transaction.amount).toLocaleString("en-UG") +
+        " | Status: " + transaction.transaction_status;
+
+      const approveButton = document.createElement("button");
+      approveButton.type = "button";
+      approveButton.textContent = "APPROVE WITHDRAWAL";
+      approveButton.onclick = () =>
+        approveSavingsWithdrawal(transaction.id);
+
+      const rejectButton = document.createElement("button");
+      rejectButton.type = "button";
+      rejectButton.textContent = "REJECT WITHDRAWAL";
+      rejectButton.onclick = () =>
+        rejectSavingsWithdrawal(transaction.id);
+
+      item.append(details, approveButton, rejectButton);
+      list.appendChild(item);
+    });
+
+  } catch (error) {
+    list.textContent = "Error: " + error.message;
+  }
+}
+  
+async function approveSavingsWithdrawal(transactionId) {
+  const message =
+    document.getElementById("withdrawalApprovalMessage");
+
+  message.textContent = "Approving withdrawal...";
+
+  try {
+    const client = connectSupabase();
+
+    const { error } = await client.rpc(
+      "approve_savings_withdrawal",
+      {
+        _transaction_id: transactionId
+      }
+    );
+
+    if (error) throw error;
+
+    message.textContent =
+      "Withdrawal approved successfully.";
+
+    await loadPendingWithdrawals();
+
+  } catch (error) {
+    message.textContent =
+      "Approval error: " + error.message;
+  }
+}
+
+ async function rejectSavingsWithdrawal(transactionId) {
+  const message =
+    document.getElementById("withdrawalApprovalMessage");
+
+  message.textContent = "Rejecting withdrawal...";
+
+  try {
+    const client = connectSupabase();
+
+    const { error } = await client.rpc(
+      "reject_savings_withdrawal",
+      {
+        _transaction_id: transactionId,
+        _reason: "Rejected by administrator"
+      }
+    );
+
+    if (error) throw error;
+
+    message.textContent =
+      "Withdrawal rejected successfully.";
+
+    await loadPendingWithdrawals();
+
+  } catch (error) {
+    message.textContent =
+      "Rejection error: " + error.message;
+  }
+} 
+  
+ async function approveSavingsDeposit(transactionId) {
+  const message = document.getElementById("approvalMessage");
+
+
+  message.textContent = "Approving deposit...";
+
+  try {
+    const client = connectSupabase();
+
+    const { error } = await client.rpc(
+      "approve_savings_deposit",
+      {
+        _transaction_id: transactionId
+      }
+    );
+
+    if (error) throw error;
+
+    message.textContent =
+      "Deposit approved and posted successfully.";
+
+    await loadPendingDeposits();
+
+  } catch (error) {
+    message.textContent =
+      "Approval error: " + error.message;
+  }
+}
+
+// OPEN ACCOUNTING WORKSPACE
+
+function showAccounting() {
+  hideAllWorkspaces();
+
+  document.getElementById("accountingBox").style.display = "block";
+
+  loadAccountingTransactions();
+}
+
+
+function showWelfare() {
+  hideAllWorkspaces();
+  document.getElementById("welfareBox").style.display = "block";
+
+  loadWelfareAccounts();
+  loadWelfareApprovals();
+  loadWelfareTransactions();
+}
+  
+// OPEN MEMBERS MANAGEMENT
+function openMembersManagement() {
+  showMembers();
+}
+
+// SAVE ACCOUNTING TRANSACTION
+async function saveAccountingTransaction() {
+  alert("Save button clicked");
+  
+  const message = document.getElementById("accountingMessage");
+message.textContent = "Save function started successfully.";
+  try {
+    const client = connectSupabase();
+
+    const { data: userData, error: userError } =
+      await client.auth.getUser();
+
+    if (userError) throw userError;
+
+    const transaction = {
+      transaction_type:
+        document.getElementById("accountingType").value,
+
+      category:
+        document.getElementById("accountingCategory").value.trim(),
+
+      amount: Number(
+        document.getElementById("accountingAmount").value
+      ),
+
+      transaction_date:
+        document.getElementById("accountingDate").value,
+
+      reference_number:
+        document.getElementById("accountingReference").value.trim(),
+
+      description:
+        document.getElementById("accountingDescription").value.trim(),
+
+      created_by: userData.user.id
+    };
+
+    if (!transaction.category || !transaction.amount ||
+        transaction.amount <= 0 || !transaction.transaction_date) {
+      throw new Error("Enter a category, valid amount and date.");
+    }
+
+    message.textContent = "Saving transaction...";
+
+    const { error } = await client
+      .from("accounting_transactions")
+      .insert(transaction);
+
+    if (error) throw error;
+
+    message.textContent =
+      "Transaction saved. It is awaiting approval.";
+
+    document.getElementById("accountingCategory").value = "";
+    document.getElementById("accountingAmount").value = "";
+    document.getElementById("accountingReference").value = "";
+    document.getElementById("accountingDescription").value = "";
+
+    await loadAccountingTransactions();
+
+  } catch (error) {
+    message.textContent = "Accounting error: " + error.message;
+  }
+}
+
+
+// OPEN ACCOUNTING APPROVALS
+
+function showAccountingApprovals() {
+  hideAllWorkspaces();
+
+  document.getElementById("accountingApprovalsBox").style.display = "block";
+
+  loadAccountingApprovals();
+}
+
+
+function showWelfareApprovals() {
+  hideAllWorkspaces();
+
+  document.getElementById("welfareBox").style.display = "block";
+
+  loadWelfareApprovals();
+}
+
+  
+// LOAD ACCOUNTING APPROVALS
+async function loadAccountingApprovals() {
+  const list = document.getElementById("accountingApprovalsList");
+
+  list.textContent = "Loading pending transactions...";
+
+  try {
+    const canApprove = currentPermissions.some(p =>
+      p.permission_key === "accounting" && p.can_approve
+    );
+
+    if (!canApprove) {
+      throw new Error("You do not have accounting approval permission.");
+    }
+
+    const client = connectSupabase();
+
+    const { data: userData, error: userError } =
+      await client.auth.getUser();
+
+    if (userError) throw userError;
+
+    const currentUserId = userData.user.id;
+
+    const { data, error } = await client
+      .from("accounting_transactions")
+      .select("*")
+      .eq("approval_status", "pending")
+      .order("transaction_date", { ascending: false });
+
+    if (error) throw error;
+
+    list.replaceChildren();
+
+    const pendingTransactions = (data || []).filter(
+      transaction => transaction.created_by !== currentUserId
+    );
+
+    if (pendingTransactions.length === 0) {
+      list.textContent = "No transactions awaiting your approval.";
+      return;
+    }
+
+    pendingTransactions.forEach(transaction => {
+      const item = document.createElement("div");
+
+      item.style.padding = "12px";
+      item.style.margin = "10px 0";
+      item.style.border = "1px solid #777";
+      item.style.borderRadius = "8px";
+
+      const details = document.createElement("p");
+
+      details.textContent =
+        transaction.transaction_type.toUpperCase() +
+        " | " + transaction.category +
+        " | UGX " + Number(transaction.amount).toLocaleString("en-UG") +
+        " | " + transaction.transaction_date;
+
+      const description = document.createElement("p");
+      description.textContent =
+        transaction.description || "No description";
+
+      const reference = document.createElement("p");
+      reference.textContent =
+        "Reference: " + (transaction.reference_number || "N/A");
+
+      const approveButton = document.createElement("button");
+      approveButton.textContent = "APPROVE";
+      approveButton.onclick = () =>
+        processAccountingApproval(transaction.id, "approved");
+
+      const rejectButton = document.createElement("button");
+      rejectButton.textContent = "REJECT";
+      rejectButton.onclick = () =>
+        processAccountingApproval(transaction.id, "rejected");
+
+      item.append(
+        details,
+        description,
+        reference,
+        approveButton,
+        rejectButton
+      );
+
+      list.appendChild(item);
+    });
+
+  } catch (error) {
+    list.textContent = "Approval loading error: " + error.message;
+  }
+}
+
+
+// LOAD ACCOUNTING TRANSACTIONS
+async function loadAccountingTransactions() {
+  const list = document.getElementById("accountingTransactions");
+
+  list.textContent = "Loading transactions...";
+
+  try {
+    const client = connectSupabase();
+const { data: userData, error: userError } = await client.auth.getUser();
+if (userError) throw userError;
+const currentUserId = userData.user.id;
+    const { data, error } = await client
+      .from("accounting_transactions")
+      .select("*")
+      .order("transaction_date", { ascending: false });
+
+    if (error) throw error;
+
+    list.replaceChildren();
+
+    let income = 0;
+    let expenses = 0;
+
+    if (!data || data.length === 0) {
+      list.textContent = "No accounting transactions found.";
+    } else {
+      data.forEach(transaction => {
+        const item = document.createElement("div");
+        item.style.padding = "10px";
+        item.style.margin = "8px 0";
+        item.style.border = "1px solid #777";
+        item.style.borderRadius = "8px";
+
+        const amount = Number(transaction.amount);
+
+        if (transaction.approval_status === "approved") {
+          if (transaction.transaction_type === "income") {
+            income += amount;
+          } else {
+            expenses += amount;
+          }
+        }
+       if (
+  transaction.approval_status === "pending" &&
+  currentPermissions.some(p =>
+    p.permission_key === "accounting" && p.can_update
+  )
+) {
+  const editButton = document.createElement("button");
+  editButton.textContent = "EDIT";
+  editButton.onclick = () =>
+    editAccountingTransaction(transaction);
+
+  item.appendChild(editButton);
+} 
+
+  
+// DELETE BUTTON
+if (
+  transaction.approval_status === "pending" &&
+  currentPermissions.some(p =>
+    p.permission_key === "accounting" && p.can_delete
+  )
+) {
+  const deleteButton = document.createElement("button");
+
+  deleteButton.textContent = "DELETE";
+  deleteButton.style.backgroundColor = "#dc3545";
+  deleteButton.style.color = "white";
+
+  deleteButton.onclick = () =>
+    deleteAccountingTransaction(transaction.id);
+
+  item.appendChild(deleteButton);
+}
+
+
+        const details = document.createElement("p");
+        details.textContent =
+          transaction.transaction_type.toUpperCase() +
+          " | " + transaction.category +
+          " | UGX " + amount.toLocaleString("en-UG") +
+          " | " + transaction.transaction_date;
+
+        const status = document.createElement("p");
+        status.textContent =
+          "Approval status: " + transaction.approval_status;
+
+        item.append(details, status);
+ if (
+  transaction.approval_status === "pending" &&
+  transaction.created_by !== currentUserId &&
+  currentPermissions.some(p =>
+    p.permission_key === "accounting" && p.can_approve
+  )
+) {
+  const approveButton = document.createElement("button");
+  approveButton.textContent = "APPROVE";
+  approveButton.onclick = () =>
+    processAccountingApproval(transaction.id, "approved");
+
+  const rejectButton = document.createElement("button");
+  rejectButton.textContent = "REJECT";
+  rejectButton.onclick = () =>
+    processAccountingApproval(transaction.id, "rejected");
+
+  item.append(approveButton, rejectButton);
+} 
+        list.appendChild(item);
+      });
+    }
+
+    document.getElementById("accountingIncome").textContent =
+      "UGX " + income.toLocaleString("en-UG");
+
+    document.getElementById("accountingExpenses").textContent =
+      "UGX " + expenses.toLocaleString("en-UG");
+
+    document.getElementById("accountingBalance").textContent =
+      "UGX " + (income - expenses).toLocaleString("en-UG");
+
+  } catch (error) {
+    list.textContent = "Loading error: " + error.message;
+  }
+}
+
+
+// DELETE ACCOUNTING TRANSACTION
+async function deleteAccountingTransaction(transactionId) {
+  const message = document.getElementById("accountingMessage");
+
+  try {
+    const canDelete = currentPermissions.some(p =>
+      p.permission_key === "accounting" && p.can_delete
+    );
+
+    if (!canDelete) {
+      throw new Error("You do not have permission to delete transactions.");
+    }
+
+    const confirmed = confirm(
+      "Are you sure you want to delete this pending transaction?"
+    );
+
+    if (!confirmed) return;
+
+    message.textContent = "Deleting transaction...";
+
+    const client = connectSupabase();
+
+    const { data, error } = await client
+      .from("accounting_transactions")
+      .delete()
+      .eq("id", transactionId)
+      .eq("approval_status", "pending")
+      .select("id");
+
+    if (error) throw error;
+
+    if (!data || data.length === 0) {
+      throw new Error(
+        "Transaction was not deleted. It may no longer be pending or you may lack permission."
+      );
+    }
+
+    message.textContent = "Transaction deleted successfully.";
+
+    await loadAccountingTransactions();
+
+  } catch (error) {
+    message.textContent = "Deletion error: " + error.message;
+  }
+}
+
+  
+  async function processAccountingApproval(transactionId, decision) {
+  const message = document.getElementById("accountingMessage");
+
+  try {
+    const client = connectSupabase();
+    let note = null;
+
+    if (decision === "rejected") {
+      note = prompt("Enter the reason for rejection:");
+
+      if (note === null) return;
+
+      if (!note.trim()) {
+        throw new Error("Please enter a rejection reason.");
+      }
+    }
+
+    message.textContent = "Processing approval...";
+
+    const { error } = await client.rpc(
+      "process_accounting_approval",
+      {
+        p_transaction_id: transactionId,
+        p_decision: decision,
+        p_note: note
+      }
+    );
+
+    if (error) throw error;
+
+    message.textContent =
+      decision === "approved"
+        ? "Transaction approved successfully."
+        : "Transaction rejected successfully.";
+
+    await loadAccountingTransactions();
+await loadAccountingApprovals();
+
+  } catch (error) {
+    message.textContent = "Approval error: " + error.message;
+  }
+}
+ async function editAccountingTransaction(transaction) {
+  try {
+    const category = prompt("Enter category:", transaction.category);
+    if (category === null) return;
+
+    const amountText = prompt("Enter amount:", transaction.amount);
+    if (amountText === null) return;
+
+    const date = prompt(
+      "Enter transaction date (YYYY-MM-DD):",
+      transaction.transaction_date
+    );
+    if (date === null) return;
+
+    const reference = prompt(
+      "Enter reference number:",
+      transaction.reference_number || ""
+    );
+    if (reference === null) return;
+
+    const description = prompt(
+      "Enter description:",
+      transaction.description || ""
+    );
+    if (description === null) return;
+
+    const amount = Number(amountText);
+
+    if (!category.trim() || !Number.isFinite(amount) || amount <= 0 || !date) {
+      throw new Error("Enter a valid category, amount and date.");
+    }
+
+    const client = connectSupabase();
+
+    const { error } = await client.rpc(
+      "update_accounting_transaction",
+      {
+        p_transaction_id: transaction.id,
+        p_category: category.trim(),
+        p_amount: amount,
+        p_transaction_date: date,
+        p_reference_number: reference.trim(),
+        p_description: description.trim()
+      }
+    );
+
+    if (error) throw error;
+
+    document.getElementById("accountingMessage").textContent =
+      "Transaction updated successfully.";
+
+    await loadAccountingTransactions();
+
+  } catch (error) {
+    document.getElementById("accountingMessage").textContent =
+      "Editing error: " + error.message;
+  }
+} 
+
+  async function generateAccountingReport() {
+  const result = document.getElementById("accountingReportResult");
+  const month = document.getElementById("accountingReportMonth").value;
+
+  if (!month) {
+    result.textContent = "Please select a month.";
+    return;
+  }
+
+  try {
+    result.textContent = "Generating report...";
+
+    const client = connectSupabase();
+
+    const startDate = month + "-01";
+    const nextMonth = new Date(
+      Number(month.substring(0, 4)),
+      Number(month.substring(5, 7)),
+      1
+    );
+
+    const endDate = nextMonth.getFullYear() + "-" +
+      String(nextMonth.getMonth() + 1).padStart(2, "0") + "-01";
+
+    const { data, error } = await client
+      .from("accounting_transactions")
+      .select("transaction_type, amount, transaction_date")
+      .eq("approval_status", "approved")
+      .gte("transaction_date", startDate)
+      .lt("transaction_date", endDate);
+
+    if (error) throw error;
+
+    let income = 0;
+    let expenses = 0;
+
+    data.forEach(transaction => {
+      const amount = Number(transaction.amount);
+
+      if (transaction.transaction_type === "income") {
+        income += amount;
+      } else if (transaction.transaction_type === "expense") {
+        expenses += amount;
+      }
+    });
+
+    const balance = income - expenses;
+
+    result.innerHTML = `
+      <h3>Report for ${month}</h3>
+      <p>Approved Income: UGX ${income.toLocaleString("en-UG")}</p>
+      <p>Approved Expenses: UGX ${expenses.toLocaleString("en-UG")}</p>
+      <p><strong>Balance: UGX ${balance.toLocaleString("en-UG")}</strong></p>
+      <p>Total Approved Transactions: ${data.length}</p>
+    `;
+
+  } catch (error) {
+    result.textContent = "Report error: " + error.message;
+  }
+}
+
+async function generateDateRangeReport() {
+  const result = document.getElementById("dateRangeReportResult");
+
+  const startDate = document.getElementById("accountingStartDate").value;
+  const endDate = document.getElementById("accountingEndDate").value;
+
+  if (!startDate || !endDate) {
+    result.textContent = "Please select both dates.";
+    return;
+  }
+
+  if (startDate > endDate) {
+    result.textContent = "Start date cannot be after end date.";
+    return;
+  }
+
+  try {
+    result.textContent = "Generating report...";
+
+    const client = connectSupabase();
+
+    const { data, error } = await client
+      .from("accounting_transactions")
+      .select("transaction_type, amount, transaction_date")
+      .eq("approval_status", "approved")
+      .gte("transaction_date", startDate)
+      .lte("transaction_date", endDate);
+
+    if (error) throw error;
+
+    let income = 0;
+    let expenses = 0;
+
+    data.forEach(transaction => {
+      const amount = Number(transaction.amount);
+
+      if (transaction.transaction_type === "income") {
+        income += amount;
+      } else if (transaction.transaction_type === "expense") {
+        expenses += amount;
+      }
+    });
+
+    const balance = income - expenses;
+
+    result.replaceChildren();
+
+    const heading = document.createElement("h3");
+    heading.textContent = "Report: " + startDate + " to " + endDate;
+
+    const incomeLine = document.createElement("p");
+    incomeLine.textContent = "Approved Income: UGX " +
+      income.toLocaleString("en-UG");
+
+    const expenseLine = document.createElement("p");
+    expenseLine.textContent = "Approved Expenses: UGX " +
+      expenses.toLocaleString("en-UG");
+
+    const balanceLine = document.createElement("p");
+    balanceLine.textContent = "Balance: UGX " +
+      balance.toLocaleString("en-UG");
+
+    const countLine = document.createElement("p");
+    countLine.textContent = "Total Approved Transactions: " + data.length;
+
+    result.append(
+      heading,
+      incomeLine,
+      expenseLine,
+      balanceLine,
+      countLine
+    );
+
+  } catch (error) {
+    result.textContent = "Report error: " + error.message;
+  }
+}
+document.getElementById("memberActivationMethod")
+  .addEventListener("change", function () {
+
+    const passwordBox =
+      document.getElementById("memberPasswordBox");
+
+    if (this.value === "immediate") {
+      passwordBox.style.display = "block";
+    } else {
+      passwordBox.style.display = "none";
+    }
+
+  });
+  
+</script>
+
+  
